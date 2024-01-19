@@ -1,4 +1,4 @@
-@media (min-width: 640px) {
+@media screen and (min-width: 750px) {
 	nav ul {
 		display: flex;
 	}

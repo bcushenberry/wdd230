@@ -26,7 +26,7 @@ header img {
 }
 
 nav {
-	padding: .05rem;
+    padding-right: 1.5rem;
     background-color: black;
     font-size: 28px;
 }
@@ -46,7 +46,9 @@ nav a:hover {
 }
 
 nav li {
-    margin-bottom: 15px;
+    margin-bottom: 10px;
+    list-style-type: none;    
+    margin-right: 10px;
 }
 
 main {
