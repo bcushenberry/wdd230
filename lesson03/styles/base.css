@@ -1,0 +1,62 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&family=Karla');
+
+* {
+	box-sizing:border-box;
+}
+
+body {
+	display: grid;
+	font-family: "Montserrat", Helvetica, sans-serif;
+}
+
+header {
+    text-align: center;  
+    padding: 0.5rem;
+    background-color: #283618;
+    color: #FEFAE0;
+    font-size: 18pt;
+}
+
+h2 {
+    color: #BC6C25;
+}
+
+li {
+    list-style-type: none;
+}
+
+.color1 {
+    background-color:#283618;
+    color: white;
+}
+
+.color2 {
+    background-color: #FEFAE0;
+}
+
+.color3 {
+    background-color: #BC6C25;
+    color: white;
+}
+
+.color4 {
+    background-color: #606C38;
+    color: white;
+}
+
+.color5 {
+    background-color: #DDA15E;
+}
+
+.font1 {
+    font-family: "Montserrat";
+}
+
+.font2 {
+    font-family: "Karla";
+}
+
+img {
+    width: 90%;
+    height: auto;
+}
