@@ -5,10 +5,9 @@
 }
 
 body {
-	display: grid;
-    grid-template-columns: 0.5fr;
+    display: grid;
     text-align: center;
-	justify-content: center;
+    justify-content: center;
 	font-family: "Montserrat Alternates", Helvetica, sans-serif;
 }
 
@@ -103,11 +102,10 @@ footer {
 
 @media screen and (min-width: 400px) {
 
-
     #menu {
-        position: fixed;
-        top: 0;
-        right: 0;
+        position: absolute;
+        top: 0.5rem;
+        right: 1rem;
     }
     #menu::before {
         content: "☰";
