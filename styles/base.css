@@ -23,6 +23,8 @@ header {
 
 header img {
     margin-right: 2rem;
+    max-width: 30%;
+    min-width: 120px;
 }
 
 nav {
@@ -74,6 +76,20 @@ h3 {
     font-size: 24px;
 }
 
+h3::before {
+    content:"- "
+}
+
+h3::after {
+    content:" -"
+}
+
+iframe {
+    height: 250px;
+    width: 80%;
+    padding-bottom: 1rem;    
+}
+
 footer {
     background-color: steelblue;
     color: white;
@@ -83,4 +99,43 @@ footer {
 
 #lastModified {
     color: yellow;
+}
+
+@media screen and (min-width: 400px) {
+
+
+    #menu {
+        position: fixed;
+        top: 0;
+        right: 0;
+    }
+    #menu::before {
+        content: "☰";
+    }
+
+    #menu.open::before {
+        content: "X";
+    }
+    
+    .navigation {
+        display: none;
+    }
+
+    .open {
+        display: block;
+    }
+
+    .close {
+        display: none;
+    }
+}
+
+@media screen and (min-width: 750px) {
+
+    #menu {
+        display: none;
+    }
+    .navigation {
+        display: block;
+    }
 }
