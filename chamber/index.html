@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="The home page for the San Juan Capistrano Chamber of Commerce. (Not the real one - this is a student project!)">
+    <meta name="author" content="Brandon">
+    <link rel="icon" href="favicon.ico">
+    <link rel="stylesheet" href="styles/normalize.css">
+    <link rel="stylesheet" href="styles/base.css" crossorigin="anonymous">
+    <link rel="stylesheet" href="styles/medium.css">
+    <link rel="stylesheet" href="styles/larger.css">
+    <meta property="og:title" content="San Juan Capistrano Chamber of Commerce">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="https://upload.wikimedia.org/wikipedia/commons/thumb/6/60/Historic_Old_Town_San_Juan_Capistrano%2C_California_%2825394541403%29.jpg/2880px-Historic_Old_Town_San_Juan_Capistrano%2C_California_%2825394541403%29.jpg">
+    <meta property="og:url" content="https://bcushenberry.github.io/wdd230/chamber">
+    <title>San Juan Capistrano Chamber of Commerce</title>
+</head>
+<body>
+    <header>
+        <div><button id="menu"></button></div>
+    </header>
+    <nav class="navigation">
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="#">Page A </a></li>
+            <li><a href="#">Page B </a></li>
+            <li><a href="#">Page C </a></li>
+            <li><a href="#">Page D</a></li>
+        </ul>
+    </nav>
+    <main>
+        <div class="hero-img">
+            <img id="hero-img" src="images/hero-img.jpg" alt="a picture of the San Juan Capistrano mission ">
+        </div>
+        <section class="call-to-action">
+            <h2>Join Us</h2>
+            <p>Join the San Juan Capistrano Chamber of Commerce!</p>
+        </section>
+        <section class="current-events">
+            <h2>Current Events</h2> 
+            <p>Swallows Day Parade</p>
+        </section>
+        <section class="weather-card">
+            <h2>Weather</h2>
+            <p>Sunny</p>
+        </section>
+        <section class="spotlight">
+            <h2>Spotlights</h2>
+            <p></p>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; <span id="currentYear"></span> Contact: contact@sjccommerce.org | Brandon Cushenberry</p>
+        <p>Note: This is a project for WDD 230, an online course</p>
+        <p id="lastModified"></p>
+    </footer>
+    <script src="scripts/getdates.js"></script>
+    <script src="scripts/expandmenu.js"></script>
+</body>
+</html>
