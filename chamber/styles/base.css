@@ -70,10 +70,11 @@ h2 {
 
 .hero-img {
     max-width: 100%;
-    img {
-        max-width: 1280px;
-        height: auto;
-    }
+}
+
+.hero-img img {
+    max-width: 1280px;
+    height: auto;
 }
 
 footer {
