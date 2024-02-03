@@ -13,17 +13,17 @@ body {
 }
 
 header {
-    display: block;
-	justify-content: center;
-    align-items: center;
     background-color: #283618;
     color: #FEFAE0;
 }
 
+h1 {
+    font-size: 18pt;
+}
+
 nav {  
-    display: flex;
+    margin-top: -1rem;
     justify-content: center;
-    align-items: center;
     font-size: 28px;
     background-color: #283618;
     color: #FEFAE0;
@@ -90,6 +90,7 @@ footer {
         top: 0.5rem;
         right: 1rem;
     }
+
     #menu::before {
         content: "☰";
     }
