@@ -7,15 +7,47 @@ button.addEventListener('click', function() {
     {
         const li = document.createElement('li');
         const deleteButton = document.createElement('button');
+        const lockButton = document.createElement('button');
+
         li.textContent = input.value;
+        
+        lockButton.textContent = '🔓';
         deleteButton.textContent = '❌';
+        
+        li.append(lockButton);
         li.append(deleteButton);
         list.append(li);
-        deleteButton.addEventListener('click', function()
+
+        lockButton.addEventListener('click', function()
         {
-            list.removeChild(li);
-            input.focus();
+            if (lockButton.textContent == '🔓')
+            {   
+                lockButton.textContent = '🔒';
+                deleteButton.textContent = '✖️';
+            }
+            else
+            {
+                lockButton.textContent = '🔓';
+                deleteButton.textContent = '❌';                
+            }
         });
+
+        deleteButton.addEventListener('click', function()        
+        {
+            if (deleteButton.textContent == '❌')
+            {
+                list.removeChild(li);
+                input.focus();
+            }
+            else
+            {
+                deleteButton.addEventListener('click', function()
+                {
+                input.focus()
+                });
+            }
+        });
+
         input.focus();
         input.value = '';
     }
