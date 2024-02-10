@@ -35,12 +35,6 @@
         margin-right: 10px;
     }
 
-    .navigation {
-        display: flex;
-    }
-
-
-
 /*---- Old Code for Reference ----*/
     /* main {
         grid-template-columns: 1fr 1fr;
@@ -78,4 +72,9 @@
     .navigation {
         display: flex;
     } */
+
+    .navigation {
+        display: flex;
+    }
+
 }
