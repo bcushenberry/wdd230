@@ -20,6 +20,10 @@
     <header>
         <h1>San Juan Capistrano<br>Chamber of Commerce</h1>
         <div><button id="menu"></button></div>
+        <label class="mode">
+            <input type="checkbox" id="dark-mode">
+            <span class="slider"></span>
+        </label>
     </header>
     <nav class="navigation">
         <ul>
@@ -33,27 +37,54 @@
         <div class="hero-img">
             <img id="hero-img" src="images/hero-img.jpg" alt="a picture of the San Juan Capistrano mission ">
         </div>
-        <section class="call-to-action">
-            <h2>Join Us</h2>
-            <p>Join the San Juan Capistrano Chamber of Commerce!</p>
+        <section class="top-wrapper">
+            <section class="current-events">
+                <h2>Current Events</h2>
+                <hr>
+                <h3>Swallows Day Parade</h3>
+                <p>Join us for the annual celebration of the swallows' arrival on March 23rd at 10:00am!</p>
+                <h3>Annual Chili Cookoff</h3>
+                <p>Bring your best chili recipes and get ready to have your socks blown off by some great chili!</p>
+            </section>
+            
+            <section class="weather-card">
+                <h2>Weather</h2>
+                <hr>
+                <p>Sunny as always!</p>
+                <p>High: 85°F</p>
+                <p>Low: 58°F</p>
+            </section>
         </section>
-        <section class="current-events">
-            <h2>Current Events</h2> 
-            <p>Swallows Day Parade</p>
+        <section class="spotlights">
+            <section id="spotlight1">
+                <h3>Ruby's Diner</h3>
+                <p class="subtitle">Shooby Dooby down to Ruby's!</p>
+                <p>ruby@rubys.com</p>
+                <p>(949) 555-5551</p>
+            </section>
+            <section id="spotlight2">
+                <h3>Mystery Books</h3>
+                <p class="subtitle">Come solve the mystery of what your next favorite book is!</p>
+                <p>contact@mysterybooks.com</p>
+                <p>(949) 555-5552</p>
+            </section>
+            <section id="spotlight3">
+                <h3>Mission Mall</h3>
+                <p class="subtitle">We've got a mission: to be the best mall!</p>
+                <p>contact@missionmall.com</p>
+                <p>(949) 555-5553</p>
+            </section>
         </section>
-        <section class="weather-card">
-            <h2>Weather</h2>
-            <p>Sunny</p>
-        </section>
-        <section class="spotlight">
-            <h2>Spotlights</h2>
-            <p></p>
-        </section>
+
+<!--        <section class="call-to-action">-->
+<!--            <h2>Join Us</h2>-->
+<!--            <hr>-->
+<!--            <p>Join the San Juan Capistrano Chamber of Commerce!</p>-->
+<!--        </section>-->
     </main>
     <footer>
-        <p>&copy; <span id="currentYear"></span> Contact: contact@sjccommerce.org | Brandon Cushenberry</p>
-        <p>Note: This is a project for WDD 230, an online course</p>
-        <p id="lastModified"></p>
+        <p>Contact: contact@sjccommerce.org | (949) 555-5555 | 123 Mission Rd., San Juan Capistrano CA</p>
+        <p>&copy; <span id="currentYear"></span> SJC Chamber | Brandon Cushenberry | WDD 230 Project | <span id="lastModified"></span></p>
     </footer>
     <script src="scripts/getdates.js"></script>
     <script src="scripts/expandmenu.js"></script>
