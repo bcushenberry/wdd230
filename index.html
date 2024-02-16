@@ -17,7 +17,7 @@
 </head>
 <body>
     <header>
-        <img src="images/profile-pic.jpg" alt="Profile picture">
+        <img src="images/profile-pic.webp" alt="Profile picture">
         <h1>Brandon Cushenberry</h1>
         <div><button id="menu"></button></div>
     </header>
@@ -31,6 +31,16 @@
         </ul>
     </nav>
     <main>
+        <div class="hero">
+            <picture>
+                <source media="(max-width: 400px)" srcset="images/hero-small.webp">
+                <source media="(max-width: 960px)" srcset="images/hero-medium.webp">
+                <img src="images/hero-large.webp" alt="table setting" width="1250" height="750">
+            </picture>
+            <div class="herolabel">
+                <p>San Diego Temple</p>
+            </div>
+        </div>
         <h2>WDD 230: Web Frontend Development</h2>
         <hr>
         <section>
@@ -38,7 +48,7 @@
             <ul>
                 <li>01: <a href="lesson01/holygrail.html">1st Assignment</a></li>
                 <li>02: <a href="lesson02/design-principles.html">Design Principles</a></li>
-                <li>03: <a href="images/css-combinators-exercise.jpg">CSS Combinators Exercise</a></li>
+                <li>03: <a href="images/css-combinators-exercise.webp">CSS Combinators Exercise</a></li>
                 <li>&emsp;&ensp; <a href="https://codepen.io/bcushenberry/pen/QWoqxbZ">CSS Pseudo-elements Exercise</a></li>
                 <li>&emsp;&ensp; <a href="https://codepen.io/bcushenberry/pen/GReMGdd">Responsive Hamburger Exercise</a></li>
                 <li>04: <a href="https://codepen.io/bcushenberry/pen/GRexyvP">Pseudo-class Code Pen</a></li>
