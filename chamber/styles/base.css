@@ -12,9 +12,21 @@ body {
     max-width: 100%;
 }
 
+/*.logo {
+    max-width: 150px;
+    height: auto;
+}*/
+
 header {
     background-color: #283618;
     color: #FEFAE0;
+/*    position: fixed;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 99;
+*/
 }
 
 h1 {

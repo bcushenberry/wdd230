@@ -18,24 +18,29 @@
 </head>
 <body>
     <header>
+<!--        <div class="logo"><img class="logo" src="images/chamber-logo.webp" alt="SJC Chamber of Commerce Logo"></div>-->
         <h1>San Juan Capistrano<br>Chamber of Commerce</h1>
         <div><button id="menu"></button></div>
         <label class="mode">
             <input type="checkbox" id="dark-mode">
             <span class="slider"></span>
         </label>
+        <nav class="navigation">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="#">Discover</a></li>
+                <li><a href="#">Directory</a></li>
+                <li><a href="#">Join</a></li>
+            </ul>
+        </nav>
     </header>
-    <nav class="navigation">
-        <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="#">Discover</a></li>
-            <li><a href="#">Directory</a></li>
-            <li><a href="#">Join</a></li>
-        </ul>
-    </nav>
     <main>
         <div class="hero-img">
-            <img id="hero-img" src="images/hero-img.jpg" alt="a picture of the San Juan Capistrano mission ">
+            <picture>
+                <source media="(max-width: 450px)" srcset="images/hero-small.webp">
+                <source media="(max-width: 750px)" srcset="images/hero-medium.webp">
+                <img id="hero-img" src="images/hero-large.webp" alt="a picture of the San Juan Capistrano mission" width="1920" height="1280">
+            </picture>
         </div>
         <div class="top-wrapper">
             <section class="current-events">
@@ -53,6 +58,9 @@
                 <p>Sunny as always!</p>
                 <p>High: 85°F</p>
                 <p>Low: 58°F</p>
+                <p>Current Temperature: <span class="current-temp">63</span>°F</p>
+                <p>Wind Speed: <span class="wind-speed">5</span> mph</p>
+                <p>Wind Chill: <span class="wind-chill"></span><span class="wind-chill-units">°F</span></p>
             </section>
         </div>
         <div class="spotlights">
@@ -88,5 +96,6 @@
     </footer>
     <script src="scripts/getdates.js"></script>
     <script src="scripts/expandmenu.js"></script>
+    <script src="scripts/windchill.js"></script>
 </body>
 </html>
