@@ -131,9 +131,6 @@ footer {
         top: 0.5rem;
         right: 1rem;
     }
-    #menu::before {
-        content: "☰";
-    }
 
     #menu.open::before {
         content: "X";
