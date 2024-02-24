@@ -177,6 +177,46 @@ footer {
     transform: translateX(26px);
   }
 
+  /* -------- Discover page --------- */
+.discover-main {
+    display: grid;
+    grid-template-columns: 1fr;
+    margin: 0 auto;
+    padding-bottom: 1rem;
+    max-width: 100%;
+}
+
+.discover-main img {
+    max-width: 100%;
+    height: auto;
+}
+.sidebar-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.sidebar-wrapper > * {
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 10px;
+}
+
+.photo-wrapper {
+    display: flex;
+    flex-direction: column;
+    padding-top: 10px;
+}
+
+.photo-wrapper > * {
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 10px;
+    padding-top: 15px;
+    font-size: smaller;
+    /* hover effect */
+}
+
 
 @media screen and (min-width: 400px) {
 

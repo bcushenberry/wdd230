@@ -6,7 +6,6 @@
         grid-gap: 10px;
     }
 
-
     header {
         margin-bottom: -.5rem;
     }
@@ -42,4 +41,17 @@
     .navigation {
         display: flex;
     }
+
+    .discover-main {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .photo-wrapper {
+        margin-left: -20px;
+    }
+
+    .photo-wrapper img:hover {
+        box-shadow: 0 0 50px #333;
+    }
+
 }
