@@ -1,5 +1,14 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat+Alternates');
 
+:root {
+    --font-family: "Montserrat Alternates", Helvetica, sans-serif;
+    --primary-color: steelblue;
+    --secondary-color: white;
+    --tertiary-color: yellow;
+    --box-shadow-color-thin: rgba(0,0,0,.3);
+    --box-shadow-color: rgba(0,0,0,.75);
+}
+
 * {
 	box-sizing:border-box;
 }
@@ -8,7 +17,7 @@ body {
     display: grid;
     text-align: center;
     justify-content: center;
-	font-family: "Montserrat Alternates", Helvetica, sans-serif;
+	font-family: var(--font-family);
 }
 
 .hero {
@@ -26,7 +35,7 @@ body {
 	top: 30px;
 	left: 30px;
 	background: radial-gradient(#fff, #ced7ff);
-	border: 1px solid rgba(0,0,0,.75);
+	border: 1px solid var(--box-shadow-color);
 	padding: 1.5rem;
 	box-shadow: 0 0 3rem #fff;
 	opacity: 0.75;
@@ -47,8 +56,8 @@ header {
 	justify-content: center;
     align-items: center;
     padding: 1rem;
-    background-color: steelblue;
-    color: white;
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
 }
 
 header img {
@@ -64,17 +73,17 @@ nav {
 }
 
 nav a:link {
-    color: white;
+    color: var(--secondary-color);
     text-decoration: none;
 }
 
 nav a:visited {
-    color:steelblue;
+    color: var(--primary-color);
 }
 
 nav a:hover {
-    background-color: steelblue;
-    color: white;
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
 }
 
 nav li {
@@ -90,7 +99,7 @@ main {
 }
 
 section {
-	box-shadow: 0 0 3px rgba(0,0,0,.3);
+	box-shadow: 0 0 3px var(--box-shadow-color-thin);
     padding-bottom: 0.5rem;
 }
 
@@ -100,8 +109,8 @@ main section ul {
 }
 
 h3 {
-    background-color: steelblue;
-    color: white;
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
     padding: 1rem;
     font-size: 24px;
 }
@@ -121,14 +130,14 @@ iframe {
 }
 
 footer {
-    background-color: steelblue;
-    color: white;
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
     font-size: 14pt;
     font-weight: bold;
 }
 
 #lastModified {
-    color: yellow;
+    color: var(--tertiary-color);
 }
 
 @media screen and (min-width: 400px) {

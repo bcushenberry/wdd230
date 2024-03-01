@@ -7,8 +7,9 @@
     <meta name="author" content="Brandon Cushenberry">
     <link rel="icon" href="favicon.ico">
     <link rel="stylesheet" href="styles/normalize.css">
-    <link rel="stylesheet" href="styles/form.css">
+    <link rel="stylesheet" href="styles/larger.css">
     <link rel="stylesheet" href="styles/base.css" crossorigin="anonymous">
+    <link rel="stylesheet" href="styles/form.css">
     <meta property="og:title" content="Web Form Practice">
     <meta property="og:type" content="website">
     <title>Form Practice</title>
@@ -21,7 +22,7 @@
     </header>
     <nav class="navigation">
         <ul>
-            <li><a href="#">Home</a></li>
+            <li><a href="./index.html">Home</a></li>
             <li><a href="lesson03/chamber-site-plan.html">Site Plan</a></li>
             <li><a href="chamber/">Chamber</a></li>
             <li><a href="https://www.byui.edu/" target="_blank">BYU-Idaho</a></li>
@@ -29,15 +30,15 @@
         </ul>
     </nav>
     <main>
-        <form id="form" action="/record.html" method="get">
+        <form class="form" action="/record.html" method="get">
             <div id="password-error"></div>
-            <label for="username">Username:</label>
+            <label for="username">Username*</label>
             <input type="text" id="username" name="username" required><br>
-            <label for="password">Password:</label>
+            <label for="password">Password*</label>
             <input type="password" id="password" name="password" pattern="[a-zA-Z0-9]{8,}" title="Passwords must be at least 8 alphanumeric characters" required><br>
-            <label for="password2">Confirm Password:</label>
+            <label for="password2">Confirm Password*</label>
             <input type="password" id="password2" name="password2" required><br>
-            <label for="email">Email:</label>
+            <label for="email">Email*</label>
             <input type="email" id="email" name="email" pattern="[a-zA-Z0-9_.\-]+@byui.edu" title="A valid byui.edu email address" required><br>
             <label for="rating">Rating: </label>
             <div id="ratingvalue">1</div>
@@ -54,14 +55,15 @@
                 <option value="9">9</option>
                 <option value="10">10</option>
             </datalist><br>
-            <input type="submit" value="Submit">
+            <input type="submit" value="Submit Rating">
         </form>
-
     </main>
     <footer>
         <h4>&copy; <span id="currentYear"></span> Brandon Cushenberry, Japan</h4>
         <h4 id="lastModified"></h4>
     </footer>
+    <script src="scripts/expandmenu.js"></script>
+    <script src="/scripts/getdates.js"></script>
     <script src="/scripts/form.js"></script>
 </body>
 </html>

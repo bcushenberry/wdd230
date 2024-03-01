@@ -1,22 +1,29 @@
 
-#form {
+.form label {
     display: block;
+    color: var(--primary-color);
+	text-align: left;
+}
+
+.form input, .form div {
+	display: block;
 }
 
 #rating {
 	width: 180px;
-    display: flex;
-    margin: 0 0 1% 35%;
+    display: block;
+/*    margin: 0 0 1% 35%;*/
 }
 
 #ratingvalue {
-	font-size: 2rem;
-	color: navy;
+	font-size: 1.5rem;
+	color: var(--primary-color);
+	text-align: left;
 }
 
 #rangevalues {
 	display: flex;
-	margin: 0 0 0% 36%;
+	margin: 0 0 0% 0.75%;
 	width: 10rem;
 }
 
