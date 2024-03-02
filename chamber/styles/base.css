@@ -217,6 +217,38 @@ footer {
     /* hover effect */
 }
 
+/* -------- Form CSS --------- */
+.form label {
+    display: block;
+    color: var(--primary-color);
+	text-align: left;
+}
+
+.form input, .form div {
+	display: block;
+}
+
+#rating {
+	width: 180px;
+    display: block;
+/*    margin: 0 0 1% 35%;*/
+}
+
+#ratingvalue {
+	font-size: 1.5rem;
+	color: var(--primary-color);
+	text-align: left;
+}
+
+#rangevalues {
+	display: flex;
+	margin: 0 0 0% 0.75%;
+	width: 10rem;
+}
+
+#rangevalues option {
+	flex: 1 1 auto;
+}
 
 @media screen and (min-width: 400px) {
 
