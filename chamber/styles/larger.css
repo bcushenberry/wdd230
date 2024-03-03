@@ -6,7 +6,6 @@
         grid-gap: 10px;
     }
 
-
     header {
         margin-bottom: -.5rem;
     }
@@ -17,6 +16,10 @@
 
     .current-events {
         grid-column: 1 / 3;
+    }
+
+    .weather {
+        grid-column: 2 / 3;
     }
     
     .spotlights {
@@ -29,11 +32,29 @@
         display: none;
     }
 
-    ul {
+    nav ul {
         display: flex;
         justify-content: center;        
         margin-right: 10px;
     }
+
+    .discover-main {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .photo-wrapper {
+        margin-left: -20px;
+    }
+
+    .photo-wrapper img:hover {
+        box-shadow: 0 0 50px #333;
+    }
+
+    .main-join {
+        grid-template-columns: 1fr 1fr 1fr .5fr;
+    }
+
+
 
 /*---- Old Code for Reference ----*/
     /* main {

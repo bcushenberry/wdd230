@@ -3,67 +3,119 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Practice building web forms">
-    <meta name="author" content="Brandon Cushenberry">
+    <meta name="description" content="The home page for the San Juan Capistrano Chamber of Commerce. (Not the real one - this is a student project!)">
+    <meta name="author" content="Brandon">
     <link rel="icon" href="favicon.ico">
     <link rel="stylesheet" href="styles/normalize.css">
-    <link rel="stylesheet" href="styles/larger.css">
     <link rel="stylesheet" href="styles/base.css" crossorigin="anonymous">
-    <link rel="stylesheet" href="styles/form.css">
-    <meta property="og:title" content="Web Form Practice">
+    <link rel="stylesheet" href="styles/medium.css">
+    <link rel="stylesheet" href="styles/larger.css">
+    <meta property="og:title" content="San Juan Capistrano Chamber of Commerce">
     <meta property="og:type" content="website">
-    <title>Join</title>
+    <meta property="og:image" content="https://upload.wikimedia.org/wikipedia/commons/thumb/6/60/Historic_Old_Town_San_Juan_Capistrano%2C_California_%2825394541403%29.jpg/2880px-Historic_Old_Town_San_Juan_Capistrano%2C_California_%2825394541403%29.jpg">
+    <meta property="og:url" content="https://bcushenberry.github.io/wdd230/chamber">
+    <title>San Juan Capistrano Chamber of Commerce</title>
 </head>
-<body>
+<body class="body-join">
     <header>
-        <img src="images/profile-pic.webp" alt="Profile picture">
-        <h1>Brandon Cushenberry</h1>
-        <div><button id="menu">☰</button></div>
+<!--        <div class="logo"><img class="logo" src="images/chamber-logo.webp" alt="SJC Chamber of Commerce Logo"></div>-->
+        <h1>San Juan Capistrano<br>Chamber of Commerce</h1>
+        <div><button id="menu"></button></div>
+        <label class="mode">
+            <input type="checkbox" id="dark-mode">
+            <span class="slider"></span>
+        </label>
+        <nav class="navigation">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="discover.html">Discover</a></li>
+                <li><a href="#">Directory</a></li>
+                <li><a href="#">Join</a></li>
+            </ul>
+        </nav>
     </header>
-    <nav class="navigation">
-        <ul>
-            <li><a href="./index.html">Home</a></li>
-            <li><a href="lesson03/chamber-site-plan.html">Site Plan</a></li>
-            <li><a href="chamber/">Chamber</a></li>
-            <li><a href="https://www.byui.edu/" target="_blank">BYU-Idaho</a></li>
-            <li><a href="https://www.churchofjesuschrist.org/study/scriptures/dc-testament/dc/122?lang=eng&id=7#p7" target="_blank">Scripture</a></li>
-        </ul>
-    </nav>
-    <main>
-        <form class="form" action="/record.html" method="get">
-            <div id="password-error"></div>
-            <label for="fname">First Name*</label>
-            <input type="text" id="fname" name="fname" required><br>
-            <label for="lname">Last Name*</label>
-            <input type="text" id="lname" name="lname" required><br>
-            <label for="title">Title/Position*</label>
-            <input type="text" id="title" name="title" pattern="[a-zA-Z\s\-]{7,}" title="Must be at least 7 characters and can contain letters, spaces, and/or hyphens" required><br>
-            <label for="email">Email*</label>
-            <input type="email" id="email" name="email" placeholder="yourname@yourorg.com" required><br>
-            <label for="phone">Phone Number*</label>
-            <input type="tel" id="phone" name="phone" required><br>
-            <label for="org-name">Organization Name*</label>
-            <input type="text" id="org-name" name="org-name" required><br>
-            <label for="memberlevel">Membership Level*</label><br>
-            <select id="memberlevel" name="memberlevel">
-                <option value="">Please Select &#9662;</option>
-                <option value="np">Non-Profit</option>
-                <option value="bronze">Bronze</option>
-                <option value="silver">Silver</option>
-                <option value="gold">Gold</option>
-            </select>
-            <label for="org-desc">Organization Description</label>
-            <textarea id="org-desc" name="org-desc" rows="8" cols="30"></textarea><br>
+    <main class="main-join">
+        <form class="form" action="/chamber/thankyou.html" method="get">
+            <label for="fname">First Name*
+                <input type="text" id="fname" name="fname" required>
+            </label><br>
+            
+            <label for="lname">Last Name*
+                <input type="text" id="lname" name="lname" required>
+            </label><br>
+            
+            <label for="title">Title/Position*
+                <input type="text" id="title" name="title" pattern="[a-zA-Z\s\-]{7,}" title="Must be at least 7 characters and can contain letters, spaces, and/or hyphens" required>
+            </label><br>
+            
+            <label for="email">Email*
+                <input type="email" id="email" name="email" placeholder="yourname@yourorg.com" required>
+            </label><br>
+
+            <label for="phone">Phone Number*
+                <input type="tel" id="phone" name="phone" required>
+            </label><br>
+
+            <label for="org-name">Organization Name*
+                <input type="text" id="org-name" name="org-name" required>
+            </label><br>
+
+            <label for="memberlevel">Membership Level*<br>
+                <select id="memberlevel" name="memberlevel">
+                    <option value="">Please Select a Level</option>
+                    <option value="np">Non-Profit</option>
+                    <option value="bronze">Bronze</option>
+                    <option value="silver">Silver</option>
+                    <option value="gold">Gold</option>
+                </select>
+            </label><br>
+
+            <label for="org-desc">Organization Description<br>
+                <textarea id="org-desc" name="org-desc" rows="8" cols="25"></textarea><br>
+            </label><br>
+
             <input type="hidden" id="join-date" name="join-date">
-            <button type="submit" value="Join">Join</button>
+
+            <button type="submit" id="join-button" value="Join">Become a Member</button>
         </form>
+        <div class="benefits">
+            <h2>Membership Benefits</h2>
+            <h3>Non-Profit</h3>
+            <ul>
+                <li>Free membership with basic listing in the chamber directory.</li>
+                <li>Access to networking events and workshops.</li>
+                <li>Volunteer opportunities for community involvement.</li>
+            </ul>
+            <h3>Bronze</h3>
+            <ul>
+                <li>Enhanced listing in the chamber directory with logo inclusion.</li>
+                <li>Invitation to exclusive member-only events.</li>
+                <li>Discounted rates for chamber-sponsored training programs.</li>
+                <li>Recognition on the chamber's social media platforms.</li>
+            </ul>
+            <h3>Silver</h3>
+            <ul>
+                <li>Priority placement in the chamber directory and website.</li>
+                <li>Featured spotlight on the chamber's homepage.</li>
+                <li>Complimentary attendance to select chamber events.</li>
+                <li>Access to member-to-member discounts and offers.</li>
+            </ul>
+            <h3>Gold</h3>
+            <ul>
+                <li>Premier placement in the chamber directory, website, and promotional materials.</li>
+                <li>Exclusive sponsorship opportunities for chamber events.</li>
+                <li>Priority access to chamber leadership and resources.</li>
+                <li>Customized marketing and advertising opportunities.</li>
+                <li>VIP invitations to high-profile chamber functions and receptions.</li>
+            </ul>
+        </div>
     </main>
     <footer>
-        <h4>&copy; <span id="currentYear"></span> Brandon Cushenberry, Japan</h4>
-        <p id="lastModified"></p>
+        <p>Contact: contact@sjccommerce.org | (949) 555-5555 | 123 Mission Rd., San Juan Capistrano CA</p>
+        <p>&copy; <span id="currentYear"></span> SJC Chamber | Brandon Cushenberry | WDD 230 Project | <span id="lastModified"></span></p>
     </footer>
+    <script src="scripts/getdates.js"></script>
     <script src="scripts/expandmenu.js"></script>
-    <script src="/scripts/getdates.js"></script>
-    <script src="/scripts/form.js"></script>
+    <script src="scripts/join.js"></script>
 </body>
 </html>

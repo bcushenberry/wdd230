@@ -1,4 +1,4 @@
-@media screen and (min-width: 750px) {
+@media screen and (min-width: 600px) {
 
     .top-wrapper {
         display: grid;
@@ -32,7 +32,7 @@
         display: none;
     }
 
-    ul {
+    nav ul {
         display: flex;
         justify-content: center;        
         margin-right: 10px;
@@ -54,4 +54,11 @@
         box-shadow: 0 0 50px #333;
     }
 
+    .main-join {
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+
+    .benefits {
+        grid-column: span 2;
+    }
 }

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="The home page for the San Juan Capistrano Chamber of Commerce. (Not the real one - this is a student project!)">
+    <meta name="author" content="Brandon">
+    <link rel="icon" href="favicon.ico">
+    <link rel="stylesheet" href="styles/normalize.css">
+    <link rel="stylesheet" href="styles/base.css" crossorigin="anonymous">
+    <link rel="stylesheet" href="styles/medium.css">
+    <link rel="stylesheet" href="styles/larger.css">
+    <meta property="og:title" content="San Juan Capistrano Chamber of Commerce">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="https://upload.wikimedia.org/wikipedia/commons/thumb/6/60/Historic_Old_Town_San_Juan_Capistrano%2C_California_%2825394541403%29.jpg/2880px-Historic_Old_Town_San_Juan_Capistrano%2C_California_%2825394541403%29.jpg">
+    <meta property="og:url" content="https://bcushenberry.github.io/wdd230/chamber">
+    <title>San Juan Capistrano Chamber of Commerce</title>
+</head>
+<body class="body-join">
+    <header>
+<!--        <div class="logo"><img class="logo" src="images/chamber-logo.webp" alt="SJC Chamber of Commerce Logo"></div>-->
+        <h1>San Juan Capistrano<br>Chamber of Commerce</h1>
+        <div><button id="menu"></button></div>
+        <label class="mode">
+            <input type="checkbox" id="dark-mode">
+            <span class="slider"></span>
+        </label>
+        <nav class="navigation">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="discover.html">Discover</a></li>
+                <li><a href="#">Directory</a></li>
+                <li><a href="#">Join</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <div class="thanks-container">
+        <h2>Thank you for joining!</h2>
+        <p>Check your email for your membership info!</p>
+        </div>
+    </main>
+    <footer>
+        <p>Contact: contact@sjccommerce.org | (949) 555-5555 | 123 Mission Rd., San Juan Capistrano CA</p>
+        <p>&copy; <span id="currentYear"></span> SJC Chamber | Brandon Cushenberry | WDD 230 Project | <span id="lastModified"></span></p>
+    </footer>
+    <script src="scripts/getdates.js"></script>
+    <script src="scripts/expandmenu.js"></script>
+</body>
+</html>

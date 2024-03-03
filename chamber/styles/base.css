@@ -5,7 +5,6 @@
 }
 
 body {
-    display: grid;
     text-align: center;
     justify-content: center;
 	font-family: "Montserrat", Helvetica, sans-serif;
@@ -18,6 +17,7 @@ body {
 }*/
 
 header {
+    display: grid;
     background-color: #283618;
     color: #FEFAE0;
 /*    position: fixed;
@@ -55,7 +55,7 @@ nav a:hover {
     color: #FEFAE0;
 }
 
-li {
+nav li {
     margin-right: 10px;
     margin-bottom: 10px;
     list-style-type: none;
@@ -111,6 +111,7 @@ hr {
 }
 
 footer {
+    display: grid;
     background-color: #283618;
     color: #FEFAE0;
     font-size: 14pt;
@@ -121,8 +122,103 @@ footer {
     color: #BC6C25;
 }
 
+/* -------- Discover page --------- */
+.discover-main {
+    display: grid;
+    grid-template-columns: 1fr;
+    margin: 0 auto;
+    padding-bottom: 1rem;
+    max-width: 100%;
+}
 
-/* Dark mode switch */
+.discover-main img {
+    max-width: 100%;
+    height: auto;
+}
+.sidebar-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.sidebar-wrapper > * {
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 10px;
+}
+
+.photo-wrapper {
+    display: flex;
+    flex-direction: column;
+    padding-top: 10px;
+}
+
+.photo-wrapper > * {
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 10px;
+    padding-top: 15px;
+    font-size: smaller;
+    /* hover effect */
+}
+
+/* -------- Join Page --------- */
+.main-join {
+    margin-top: .5rem;
+    display: grid;
+    grid-template-columns: 1fr;
+    text-align: left;
+}
+
+.form {
+    margin-top: 1rem;
+    margin-left: 1rem;
+    margin-bottom: 1rem;
+    padding-top: 1rem;
+    padding-left: 1rem;
+}
+
+.form label {
+    display: block;
+	text-align: left;
+}
+
+.form input, .form div {
+	display: block;
+}
+
+#join-button {
+    border: none;
+    background-color: #283618;
+    color: #FEFAE0;
+    font-weight: bold;
+    font-size: large;
+    border-radius: 10px;
+    padding: .75rem;
+    width: 15rem;
+    margin-left: .15rem;
+}
+
+.benefits {
+    text-align: left;
+    font-size: .93em;
+    border: 1px solid #999;
+    margin: 1rem;
+    padding-right: .5rem;
+    padding-left: .5rem;
+}
+
+.benefits h2, h3 {
+    text-align: center;
+}
+
+.thanks-container {
+    display: grid;
+    margin: 2rem;
+    border: 1px solid #999;
+}
+
+/* -------- Dark Mode Switch -------- */
 .mode {
     position: absolute;
 	top: 2rem;
@@ -177,80 +273,7 @@ footer {
     transform: translateX(26px);
   }
 
-  /* -------- Discover page --------- */
-.discover-main {
-    display: grid;
-    grid-template-columns: 1fr;
-    margin: 0 auto;
-    padding-bottom: 1rem;
-    max-width: 100%;
-}
-
-.discover-main img {
-    max-width: 100%;
-    height: auto;
-}
-.sidebar-wrapper {
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-}
-
-.sidebar-wrapper > * {
-    border-radius: 8px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    padding: 10px;
-}
-
-.photo-wrapper {
-    display: flex;
-    flex-direction: column;
-    padding-top: 10px;
-}
-
-.photo-wrapper > * {
-    border-radius: 8px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    padding: 10px;
-    padding-top: 15px;
-    font-size: smaller;
-    /* hover effect */
-}
-
-/* -------- Form CSS --------- */
-.form label {
-    display: block;
-    color: var(--primary-color);
-	text-align: left;
-}
-
-.form input, .form div {
-	display: block;
-}
-
-#rating {
-	width: 180px;
-    display: block;
-/*    margin: 0 0 1% 35%;*/
-}
-
-#ratingvalue {
-	font-size: 1.5rem;
-	color: var(--primary-color);
-	text-align: left;
-}
-
-#rangevalues {
-	display: flex;
-	margin: 0 0 0% 0.75%;
-	width: 10rem;
-}
-
-#rangevalues option {
-	flex: 1 1 auto;
-}
-
-@media screen and (min-width: 400px) {
+@media screen and (min-width: 300px) {
 
     #menu {
         position: absolute;
