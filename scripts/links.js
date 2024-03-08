@@ -11,17 +11,29 @@ async function getLinks() {
 const displayLinks = (weeks) => {
     weeks.forEach((week) => {
         let weeklyLesson = document.createElement("li");
-        let activityURL = document.createElement("a");
-//        let link1 = week.links[0].url;
-//        let title1 = week.links[0].title;
-
         weeklyLesson.textContent = `${week.lesson}: `;
-//        activityURL.textContent = `${title1}`;
-//        activityURL.setAttribute("href", link1);
+
         for (let i = 0; i < week.links.length; i++) {
-            activityURL.textContent = `${week.links[i].title} `;
-            activityURL.setAttribute("href", week.links[i].url)
-            weeklyLesson.appendChild(activityURL);
+
+            if (i === 0) {
+                let activityURL = document.createElement("a");
+
+                activityURL.textContent = `${week.links[i].title} `;
+                activityURL.setAttribute("href", week.links[i].url)
+
+                weeklyLesson.appendChild(activityURL);
+            }
+            else {
+                let newLine = document.createElement("li");
+                newLine.innerHTML += "&emsp;&ensp; ";
+
+                let activityURL = document.createElement("a");
+                activityURL.textContent = `${week.links[i].title} `;
+                activityURL.setAttribute("href", week.links[i].url)
+                    
+                newLine.appendChild(activityURL);
+                weeklyLesson.appendChild(newLine);
+            }
         }
         
         activityList.appendChild(weeklyLesson);
