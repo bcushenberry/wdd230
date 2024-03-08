@@ -1,0 +1,28 @@
+{
+    "lastName": "Bobbington",
+    "moveInDate": "2024-02-27",
+    "familySize": 4,
+    "bishopricVisit": true,
+    "familyMembers": [
+        {
+            "name": "Bob",
+            "gender": "Male",
+            "birthdate":  "1982-02-27"
+        },
+        {
+            "name": "Marie",
+            "gender": "Female",
+            "birthdate":  "1986-10-13"
+        },    
+        {
+            "name": "Emi",
+            "gender": "Female",
+            "birthdate":  "2017-04-25"
+        },
+        {
+            "name": "Sara",
+            "gender": "Female",
+            "birthdate":  "2015-05-16"
+        }
+    ]
+}
