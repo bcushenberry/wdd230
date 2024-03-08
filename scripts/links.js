@@ -19,11 +19,11 @@ const displayLinks = (weeks) => {
 //        activityURL.textContent = `${title1}`;
 //        activityURL.setAttribute("href", link1);
         for (let i = 0; i < week.links.length; i++) {
-            activityURL.textContent = `${week.links[i].title} | `;
+            activityURL.textContent = `${week.links[i].title} `;
             activityURL.setAttribute("href", week.links[i].url)
             weeklyLesson.appendChild(activityURL);
         }
-
+        
         activityList.appendChild(weeklyLesson);
     });
 }
