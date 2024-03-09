@@ -1,0 +1,60 @@
+{
+    "members": [
+        {
+            "name": "Regency Theatres",
+            "address": "26762 Verdugo Street",
+            "phone": "555-3502",
+            "website": "http://www.regencymovies.com/main.php?theaterId=24",
+            "icon": "regency-logo.webp",
+            "membership": "Gold"
+        },
+        {
+            "name": "Bravos California",
+            "address": "31722 Rancho Viejo Rd",
+            "phone": "555-2728",
+            "website": "https://www.bravoscafresh.com/",
+            "icon": "bravos-logo.webp",
+            "membership": "Bronze"
+        },
+        {
+            "name": "Wendi's Donuts",
+            "address": "31654 Rancho Viejo Rd B",
+            "phone": "555-1738",
+            "website": "http://www.wendisdonuts.com/",
+            "icon": "wendis-donuts-logo.webp",
+            "membership": "Silver"
+        },
+        {
+            "name": "Sundried Tomato",
+            "address": "31781 Camino Capistrano",
+            "phone": "555-1167",
+            "website": "http://sundriedtomatobistro.com/",
+            "icon": "sundried-tomato-logo.webp",
+            "membership": "Silver"
+        },
+        {
+            "name": "Capistrano Depot",
+            "address": "26701 Verdugo Street",
+            "phone": "555-2789",
+            "website": "https://www.amtrak.com/home",
+            "icon": "amtrak-logo.webp",
+            "membership": "Gold"
+        },
+        {
+            "name": "Ball Park Pizza",
+            "address": "31654 Rancho Viejo Rd",
+            "phone": "555-6852",
+            "website": "https://places.singleplatform.com/ball-park-pizza-5/menu?ref=google",
+            "icon": "ballpark-logo.webp",
+            "membership": "Gold"
+        },
+        {
+            "name": "Las Golondrinas",
+            "address": "27124 Paseo Espada",
+            "phone": "555-3440",
+            "website": "https://lasgolondrinas.biz/",
+            "icon": "las-golondrinas-logo.webp",
+            "membership": "Gold"
+        }
+    ]
+}

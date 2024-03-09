@@ -218,6 +218,76 @@ footer {
     border: 1px solid #999;
 }
 
+/* -------- Directory Page -------- */
+
+.cards {
+    display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+	grid-gap: 5px;
+}
+
+.cards section {
+	border: 1px solid rgba(0, 0, 0, 0.1);
+	padding: 0.5rem;
+    padding-top: 1rem;
+	background-color: #283618;
+    color: #FEFAE0;
+}
+
+.cards h3 {
+    color: #BC6C25;
+}
+
+.cards img {
+    max-width: 150px;
+}
+
+.grid {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+	grid-gap: 5px;
+	align-items: center;
+}
+
+.grid section {
+	text-align: center;
+    height: 475px;
+}
+
+.grid img {
+	border: 1px solid #fff;
+	box-shadow: 0 0 10px #333;
+}
+
+.list {
+	display: flex;
+	flex-direction: column;
+    margin-bottom: 1.5rem;
+}
+
+.list section {
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    padding-bottom: 1rem;
+}
+
+.list section > * {
+	margin: 0 1rem;
+}
+
+.list section img {
+	display: none;
+}
+
+.list section h3 {
+	font-size: 1rem;
+}
+
+.list section:nth-child(even) {
+	background-color: #283618;
+}
+
+
 /* -------- Dark Mode Switch -------- */
 .mode {
     position: absolute;
