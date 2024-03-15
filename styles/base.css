@@ -123,6 +123,10 @@ h3::after {
     content:" -"
 }
 
+#weather-icon {
+    vertical-align: middle;
+  }
+
 iframe {
     height: 250px;
     width: 80%;
