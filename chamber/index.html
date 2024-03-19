@@ -18,7 +18,6 @@
 </head>
 <body class="body-index">
     <header>
-<!--        <div class="logo"><img class="logo" src="images/chamber-logo.webp" alt="SJC Chamber of Commerce Logo"></div>-->
         <h1>San Juan Capistrano<br>Chamber of Commerce</h1>
         <div><button id="menu"></button></div>
         <label class="mode">
@@ -35,6 +34,7 @@
         </nav>
     </header>
     <main>
+        <div class="banner"></div>
         <div class="hero-img">
             <picture>
                 <source media="(max-width: 450px)" srcset="images/hero-img-small.webp">
@@ -51,22 +51,23 @@
                 <h3>Annual Chili Cookoff</h3>
                 <p>Bring your best chili recipes and get ready to have your socks blown off by some great chili!</p>
             </section>
-            
             <section class="weather-card">
                 <h2>Weather</h2>
-                <hr>
-                <p>Sunny as always!</p>
-                <p>High: 85°F</p>
-                <p>Low: 58°F</p>
-                <p>Current Temperature: <span class="current-temp">63</span>°F</p>
-                <p>Wind Speed: <span class="wind-speed">5</span> mph</p>
-                <p>Wind Chill: <span class="wind-chill"></span><span class="wind-chill-units">°F</span></p>
+                <figure class="current-weather"><img id="weather-icon" src="" alt=""><span id="current-temp"></span>
+                </figure>
+                <div id="weather-desc"></div>
+                <div class="forecast">Wind speed: <span class="wind-speed">5</span> mph</div>
+                <div class="forecast">Wind chill: <span class="wind-chill"></span><span class="wind-chill-units">°F</span></div>
+                <h3>Forecast</h3>
+                <div class="forecast"><span id="dayofweek1"></span>: <span id="forecast1"></span></div>
+                <div class="forecast"><span id="dayofweek2"></span>: <span id="forecast2"></span></div>
+                <div class="forecast"><span id="dayofweek3"></span>: <span id="forecast3"></span></div>
             </section>
         </div>
         <div class="spotlights">
             <section id="spotlight1">
                 <h3>Ruby's Diner</h3>
-                <p class="subtitle">Shooby Dooby down to Ruby's!</p>
+                <p class="subtitle">Shooby dooby down to Ruby's!</p>
                 <p>ruby@rubys.com</p>
                 <p>(949) 555-5551</p>
             </section>
@@ -96,6 +97,7 @@
     </footer>
     <script src="scripts/getdates.js"></script>
     <script src="scripts/expandmenu.js"></script>
-    <script src="scripts/windchill.js"></script>
+    <script src="scripts/weather.js"></script>
+    <script src="scripts/banner.js"></script>
 </body>
 </html>

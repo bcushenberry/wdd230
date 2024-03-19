@@ -20,7 +20,6 @@ else {
     visitorMessage.textContent = `You last visited ${Math.floor(daysSince)} days ago.`;
 }
 
-
 numVisits++;
 latestVisit = today;
 

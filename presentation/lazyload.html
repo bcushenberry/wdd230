@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles/normalize.css">
+    <link rel="stylesheet" href="styles/lazyload.css" crossorigin="anonymous">  
+    <title>Lazy Loading</title>
+</head>
+<body>
+    <header>
+        <h1>Lazy Loading, a.k.a. Pictures of Cats and Bears</h1>
+    </header>
+    <main>
+        <picture>
+            <img src="https://placekitten.com/400/600" alt="a random kitty 1" loading="lazy" width="400px" height="600px">
+        </picture>
+        <picture>        
+            <img src="https://placebear.com/400/650" alt="a random bear 1" loading="lazy" width="400px" height="650px">
+        </picture>
+        <picture>
+            <img src="https://placekitten.com/400/750" alt="a random kitty 2" loading="lazy" width="400px" height="750px">
+        </picture>
+        <picture>
+            <img src="https://placebear.com/400/800" alt="a random bear 2" loading="lazy" width="400px" height="800px">
+        </picture>
+        <picture>
+            <img src="https://placekitten.com/400/700" alt="a random kitty 3" loading="lazy" width="400px" height="700px">
+        </picture>
+        <picture>
+            <img src="https://placebear.com/400/750" alt="a random bear 3" loading="lazy" width="400px" height="750px">
+        </picture>
+    </main>
+    <footer>
+        <p>Week 7 | Lazy Loading | WDD 230 | <span id="lastModified"></span></p>
+    </footer>
+    <script src="scripts/getdates.js"></script>
+</body>
+</html>

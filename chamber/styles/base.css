@@ -11,22 +11,14 @@ body {
     max-width: 100%;
 }
 
-/*.logo {
-    max-width: 150px;
-    height: auto;
-}*/
-
 header {
     display: grid;
     background-color: #283618;
     color: #FEFAE0;
-/*    position: fixed;
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    z-index: 99;
-*/
+}
+
+.banner {
+    color: #FEFAE0;
 }
 
 h1 {
@@ -60,14 +52,6 @@ nav li {
     margin-bottom: 10px;
     list-style-type: none;
 }
-
-/* main {
-    display: grid;
-    grid-template-columns: 1fr;
-    margin: 0 auto;
-    padding-bottom: 1rem;
-    max-width: 100%;
-} */
 
 .hero-img img {
     max-width: 100%;
@@ -108,6 +92,28 @@ hr {
 .subtitle {
     font-style: italic;
     margin-top: -.5rem;
+}
+/* ------ Weather -------- */
+.weather-card h3 {
+    margin-top: .5rem;
+    margin-bottom: .25rem;
+}
+#weather-icon {
+    vertical-align: middle;
+    width: 2rem;
+    height: auto;
+    margin-right: .5rem;
+  }
+#weather-desc {
+    margin-top: 1rem;
+    margin-bottom: .25rem;
+  }
+  .current-weather {
+    margin-top: -.75rem;
+    margin-bottom: -.75rem;
+}
+.forecast {
+    margin: .6rem;
 }
 
 footer {

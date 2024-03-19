@@ -1,4 +1,3 @@
-const currentTemp = document.querySelector(".current-temp").textContent;
 const windSpeed = document.querySelector(".wind-speed").textContent;
 
 function calculateWindChill(temp, speed)
