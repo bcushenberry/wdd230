@@ -258,16 +258,24 @@ footer {
     max-width: 150px;
 }
 
+.view-menu {
+    margin-bottom: 1rem;
+}
+
 .grid {
 	display: grid;
 	grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-	grid-gap: 5px;
 	align-items: center;
+    margin-right: 1rem;
+    margin-left: 1rem;
 }
 
 .grid section {
 	text-align: center;
     height: 475px;
+    margin-top: -.25rem;
+    margin-left: 2px;
+    margin-right: 2px;
 }
 
 .grid img {
@@ -278,17 +286,18 @@ footer {
 .list {
 	display: flex;
 	flex-direction: column;
-    margin-bottom: 1.5rem;
+    margin-right: .25rem;
 }
 
 .list section {
 	display: grid;
-	grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
-    padding-bottom: 1rem;
+	grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: auto;
+    margin-top: -.5rem;
 }
 
 .list section > * {
-	margin: 0 1rem;
+	margin: .5rem;
 }
 
 .list section img {
@@ -298,11 +307,6 @@ footer {
 .list section h3 {
 	font-size: 1rem;
 }
-
-.list section:nth-child(even) {
-	background-color: #283618;
-}
-
 
 /* -------- Dark Mode Switch -------- */
 .mode {
