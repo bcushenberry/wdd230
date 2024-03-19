@@ -37,7 +37,7 @@ const displayDirectory = (members) => {
         name.textContent = `${member.name}`;
         address.textContent = `${member.address}`;
         phone.textContent = `${member.phone}`;
-        website.textContent = `Website`;
+        website.textContent = `Website (link)`;
         website.setAttribute("href", member.website);
         memberlevel.textContent = `Membership: ${member.membership}`
 

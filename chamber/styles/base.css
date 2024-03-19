@@ -43,12 +43,12 @@ nav {
     color: #FEFAE0;
 }
 
-nav a:link {
+a:link {
     color: #FEFAE0;
     text-decoration: none;
 }
 
-nav a:visited {
+a:visited {
     color: #BC6C25;
 }
 
