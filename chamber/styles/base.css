@@ -18,7 +18,17 @@ header {
 }
 
 .banner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+    background-color: #BC6C25;
     color: #FEFAE0;
+    padding: .5rem;
+}
+
+#banner-text {
+    flex-grow: 1;
 }
 
 h1 {

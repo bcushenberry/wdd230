@@ -48,14 +48,15 @@ async function forecastFetch() {
 
 function displayForecast(forecastdata) {
   const threedayforecast = forecastdata.list.filter(f => f.dt_txt.includes('15:00:00'));
-  console.log(threedayforecast);
   let day = 0;
   const weekdays = ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat']
   threedayforecast.forEach((forecast) => {
     const d = new Date(forecast.dt_txt);
     document.getElementById(`dayofweek${day+1}`).textContent = weekdays[d.getDay()];
     document.getElementById(`forecast${day+1}`).innerHTML = `${forecast.main.temp_max.toFixed(0)}&deg;F`;
-    day++;
+    if (day < 2) {
+      day++;
+    }
   })
 }
 
