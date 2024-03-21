@@ -54,46 +54,6 @@
         grid-template-columns: 1fr 1fr 1fr .5fr;
     }
 
-
-
-/*---- Old Code for Reference ----*/
-    /* main {
-        grid-template-columns: 1fr 1fr;
-        grid-gap: 20px;
-    }
-
-    .current-events {
-        grid-column: 1 / 2;
-    }
-
-    .weather {
-        grid-column: 2 / 3;
-    }
-    
-    .spotlights {
-        grid-row: 3 / 3;
-        grid-column: 1 / 2;
-    }   
-
-    .call-to-action {
-        grid-row: 3 / 3;
-        grid-column: 2 / 3;
-    }
-
-    #menu {
-        display: none;
-    }
-
-    ul {
-        display: flex;
-        justify-content: center;        
-        margin-right: 10px;
-    }
-    
-    .navigation {
-        display: flex;
-    } */
-
     .navigation {
         display: flex;
     }

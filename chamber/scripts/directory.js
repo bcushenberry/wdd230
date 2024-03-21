@@ -44,8 +44,6 @@ const displayDirectory = (members) => {
         logo.setAttribute("src", "images/" + member.icon);
         logo.setAttribute("alt", `The logo for ${member.name}`);
         logo.setAttribute("loading", "lazy");
-//        logo.setAttribute("width", "300");
-//        logo.setAttribute("height", "400");
 
         card.appendChild(logo);
         card.appendChild(name);

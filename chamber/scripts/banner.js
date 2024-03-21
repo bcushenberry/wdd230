@@ -1,17 +1,19 @@
 // Weekly banner for meet-and-greet
 const banner = document.querySelector(".banner");
+const bannertext = document.querySelector("#banner-text")
 const currentDay = new Date();
-let closeButton = document.querySelector('#banner-close');
+const closeButton = document.querySelector('#banner-close');
 
 if (currentDay.getDay() > 0 && currentDay.getDay() < 3) {
-    banner.innerHTML ="<span id=\"banner-text\">Join this week's meet-and-greet at Ruby's on Wednesday @ 7:00pm!</span>";
+    bannertext.textContent ="Join this week's meet-and-greet at Ruby's on Wednesday @ 7:00pm!";
 }
 else if (currentDay.getDay() === 3) {
-    banner.innerHTML = "<span id=\"banner-text\">Join this week's meet-and-greet at Ruby's today @ 7:00pm!";
+    bannertext.textContent = "Join this week's meet-and-greet at Ruby's today @ 7:00pm!";
 }
 else {
     banner.remove();
 }
+
 closeButton.textContent = "X";
 banner.append(closeButton);
 

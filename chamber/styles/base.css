@@ -19,9 +19,6 @@ header {
 
 .banner {
     display: flex;
-    justify-content: space-between;
-    align-items: center;
-    text-align: center;
     background-color: #BC6C25;
     color: #FEFAE0;
     padding: .5rem;
@@ -35,6 +32,10 @@ h1 {
     font-size: 18pt;
 }
 
+a:link, a:visited {
+    color: #BC6C25;
+}
+
 nav {  
     margin-top: -1rem;
     justify-content: center;
@@ -46,10 +47,6 @@ nav {
 nav a:link {
     color: #FEFAE0;
     text-decoration: none;
-}
-
-a:link, a:visited {
-    color: #BC6C25;
 }
 
 nav a:hover {
@@ -103,6 +100,7 @@ hr {
     font-style: italic;
     margin-top: -.5rem;
 }
+
 /* ------ Weather -------- */
 .weather-card h3 {
     margin-top: .5rem;
@@ -138,7 +136,7 @@ footer {
     color: #BC6C25;
 }
 
-/* -------- Discover page --------- */
+/* -------- Discover Page --------- */
 .discover-main {
     display: grid;
     grid-template-columns: 1fr;
@@ -235,11 +233,11 @@ footer {
 }
 
 /* -------- Directory Page -------- */
-
 .cards {
     display: grid;
 	grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-	grid-gap: 5px;
+    margin-right: 1rem;
+    margin-left: 1rem;
 }
 
 .cards section {
@@ -248,6 +246,9 @@ footer {
     padding-top: 1rem;
 	background-color: #283618;
     color: #FEFAE0;
+    margin-top: -.25rem;
+    margin-left: 2px;
+    margin-right: 2px;    
 }
 
 .cards h3 {
@@ -263,16 +264,14 @@ footer {
 }
 
 .grid {
-	display: grid;
+    display: grid;
 	grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-	align-items: center;
     margin-right: 1rem;
     margin-left: 1rem;
 }
 
 .grid section {
 	text-align: center;
-    height: 475px;
     margin-top: -.25rem;
     margin-left: 2px;
     margin-right: 2px;
@@ -287,6 +286,7 @@ footer {
 	display: flex;
 	flex-direction: column;
     margin-right: .25rem;
+    grid-gap: 5px;
 }
 
 .list section {

@@ -11,6 +11,8 @@ async function currentWeatherFetch() {
     if (response.ok) {
       const data = await response.json();
       displayCurrentWeather(data);
+      displayWindInfo(data);
+
     } else {
         throw Error(await response.text());
     }
@@ -20,6 +22,7 @@ async function currentWeatherFetch() {
 }
 
 function displayCurrentWeather(data) {
+  currentTemp.value = 2;
   currentTemp.innerHTML = `${data.main.temp.toFixed(0)}&deg;F`;
   const iconsrc = `https://openweathermap.org/img/w/${data.weather[0].icon}.png`;
   let desc = data.weather[0].description;
@@ -60,23 +63,29 @@ function displayForecast(forecastdata) {
   })
 }
 
-// Wind speed & Wind chill display
-const windSpeed = document.querySelector(".wind-speed").textContent;
-
+// Wind chill & Wind speed display
 function calculateWindChill(temp, speed)
 {
-    return (35.74 + 0.6215 * currentTemp - 35.75 * Math.pow(windSpeed, 0.16) + 0.4275 * currentTemp * Math.pow(windSpeed, 0.16)).toFixed(2);
+    return (35.74 + 0.6215 * temp - 35.75 * Math.pow(speed, 0.16) + 0.4275 * temp * Math.pow(speed, 0.16)).toFixed(0);
 }
 
-if (windSpeed > 3 && currentTemp <= 50)
+function displayWindInfo(data)
 {
-    windChill = calculateWindChill(currentTemp, windSpeed);
-    document.querySelector('.wind-chill').textContent = `${windChill}`;
-}
+  const temperature = data.main.temp;
+  const windSpeed = data.wind.speed;
 
-else {
-    document.querySelector('.wind-chill').textContent = `N/A`;
-    document.querySelector('.wind-chill-units').textContent = ``;
+  document.querySelector('.wind-speed').innerHTML = `${windSpeed.toFixed(0)}`;
+  
+  if (windSpeed > 3 && temperature <= 50)
+  {
+      windChill = calculateWindChill(temperature, windSpeed);
+      document.querySelector('.wind-chill').textContent = `${windChill}`;
+  }
+
+  else {
+      document.querySelector('.wind-chill').textContent = `N/A`;
+      document.querySelector('.wind-chill-units').textContent = ``;
+  }   
 }
 
 // Call APIs
