@@ -10,7 +10,7 @@ else if (currentDay.getDay() === 3) {
     banner.innerHTML = "<span id=\"banner-text\">Join this week's meet-and-greet at Ruby's today @ 7:00pm!";
 }
 else {
-    banner.innerHTML = "";
+    banner.remove();
 }
 closeButton.textContent = "X";
 banner.append(closeButton);
