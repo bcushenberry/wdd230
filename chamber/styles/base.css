@@ -1,9 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat');
-@font-face {
-    font-family: "Helvetica";
-    src: local("Helvetica");
-    font-display: swap;
-}
+
 * {
 	box-sizing:border-box;
 }
