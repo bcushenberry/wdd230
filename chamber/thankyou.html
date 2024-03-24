@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en-US">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="The home page for the San Juan Capistrano Chamber of Commerce. (Not the real one - this is a student project!)">
-    <meta name="author" content="Brandon">
+    <meta name="description" content="A thank-you page from the San Juan Capistrano Chamber of Commerce. (Not the real one - this is a student project!)">
+    <meta name="author" content="Brandon Cushenberry">
     <link rel="icon" href="favicon.ico">
     <link rel="stylesheet" href="styles/normalize.css">
     <link rel="stylesheet" href="styles/base.css" crossorigin="anonymous">
@@ -14,16 +14,15 @@
     <meta property="og:type" content="website">
     <meta property="og:image" content="https://upload.wikimedia.org/wikipedia/commons/thumb/6/60/Historic_Old_Town_San_Juan_Capistrano%2C_California_%2825394541403%29.jpg/2880px-Historic_Old_Town_San_Juan_Capistrano%2C_California_%2825394541403%29.jpg">
     <meta property="og:url" content="https://bcushenberry.github.io/wdd230/chamber">
-    <title>San Juan Capistrano Chamber of Commerce</title>
+    <title>Thank You - San Juan Capistrano Chamber of Commerce</title>
 </head>
 <body class="body-join">
     <header>
-<!--        <div class="logo"><img class="logo" src="images/chamber-logo.webp" alt="SJC Chamber of Commerce Logo"></div>-->
         <h1>San Juan Capistrano<br>Chamber of Commerce</h1>
-        <div><button id="menu"></button></div>
+        <div><button id="menu">☰</button></div>
         <label class="mode">
-            <input type="checkbox" id="dark-mode">
-            <span class="slider"></span>
+            <input type="checkbox" id="dark-mode" aria-label="Dark mode">
+            <span class="mode-toggle"></span>
         </label>
         <nav class="navigation">
             <ul>

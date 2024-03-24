@@ -4,7 +4,6 @@ const display = document.querySelector("article");
 const cards = document.querySelector(".cards");
 
 gridbutton.addEventListener("click", () => {
-	// example using arrow function
 	display.classList.add("grid");
 	display.classList.remove("list");
 });
@@ -37,13 +36,14 @@ const displayDirectory = (members) => {
         name.textContent = `${member.name}`;
         address.textContent = `${member.address}`;
         phone.textContent = `${member.phone}`;
-        website.textContent = `Website (link)`;
+        website.innerHTML = `<strong>Website (link)</strong>`;
         website.setAttribute("href", member.website);
         memberlevel.textContent = `Membership: ${member.membership}`
 
         logo.setAttribute("src", "images/" + member.icon);
         logo.setAttribute("alt", `The logo for ${member.name}`);
         logo.setAttribute("loading", "lazy");
+        logo.setAttribute("class", "logo");
 
         card.appendChild(logo);
         card.appendChild(name);

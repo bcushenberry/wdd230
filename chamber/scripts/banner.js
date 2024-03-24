@@ -5,10 +5,10 @@ const currentDay = new Date();
 const closeButton = document.querySelector('#banner-close');
 
 if (currentDay.getDay() > 0 && currentDay.getDay() < 3) {
-    bannertext.textContent ="Join this week's meet-and-greet at Ruby's on Wednesday @ 7:00pm!";
+    bannertext.innerHTML ="<strong>Join this week's meet-and-greet at Ruby's on Wednesday @ 7:00pm!</strong>";
 }
 else if (currentDay.getDay() === 3) {
-    bannertext.textContent = "Join this week's meet-and-greet at Ruby's today @ 7:00pm!";
+    bannertext.innerHTML = "<strong>Join this week's meet-and-greet at Ruby's today @ 7:00pm!</strong>";
 }
 else {
     banner.remove();

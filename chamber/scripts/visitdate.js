@@ -1,27 +1,27 @@
 const today = Date.now();
-const visitorMessage = document.querySelector(".visitor-message");
 const dayInMs = 84600000;
+const visitorMessage = document.querySelector(".visitor-message");
 
-let numVisits = Number(window.localStorage.getItem("totalVisits")) || 1;
+let latestVisit = Number(window.localStorage.getItem("latestVisit")) || 0;
 
-let latestVisit = new Date();
-
-if (numVisits == 1) {
+if (latestVisit === 0) {
 	visitorMessage.textContent = `Welcome! Let us know if you have any questions.`;
 }
 
-else if ((today - latestVisit) < dayInMs) {
-        visitorMessage.textContent = `Back so soon! Awesome!`;
-}
-
 else {
-    let daysSince = (today - latestVisit) / dayInMs;
-    console.log(daysSince);
-    visitorMessage.textContent = `You last visited ${Math.floor(daysSince)} days ago.`;
+    const dateDiff = today - latestVisit;
+    const daysSince = Math.round(dateDiff / dayInMs);
+
+    if (daysSince < 1 ) {
+        visitorMessage.textContent = `Back so soon! Awesome!`;
+    }
+    else if (daysSince === 1 )
+    {
+        visitorMessage.textContent = `You last visited ${daysSince} day ago.`;
+    }
+    else {
+        visitorMessage.textContent = `You last visited ${daysSince} days ago.`;
+    }
 }
 
-numVisits++;
-latestVisit = today;
-
-localStorage.setItem("totalVisits", numVisits);
-localStorage.setItem("latestVisit", latestVisit);
+localStorage.setItem("latestVisit", today);

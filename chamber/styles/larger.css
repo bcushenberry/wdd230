@@ -50,10 +50,6 @@
         box-shadow: 0 0 50px #333;
     }
 
-    .main-join {
-        grid-template-columns: 1fr 1fr 1fr .5fr;
-    }
-
     .navigation {
         display: flex;
     }

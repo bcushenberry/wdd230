@@ -53,6 +53,19 @@
         display: flex;
     }
 
+    .mode-toggle:after {
+        content: "Dark";
+        position: absolute;
+        top: 2.5rem;
+        right: 0.3rem;
+        color: #BC6C25;
+    }
+
+    input:checked + .mode-toggle:after {
+        content: "Light";
+        color: #FEFAE0;
+      }
+
     .discover-main {
         grid-template-columns: 1fr 1fr;
     }
@@ -66,10 +79,14 @@
     }
 
     .main-join {
-        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    }
+
+    .form {
+        grid-column: span 2;
     }
 
     .benefits {
-        grid-column: span 2;
+        grid-column: span 3;
     }
 }

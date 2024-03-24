@@ -1,5 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat');
-
+@font-face {
+    font-family: "Helvetica";
+    src: local("Helvetica");
+    font-display: swap;
+}
 * {
 	box-sizing:border-box;
 }
@@ -180,14 +184,13 @@ footer {
 .main-join {
     margin-top: .5rem;
     display: grid;
-    grid-template-columns: 1fr;
     text-align: left;
+    min-width: auto;
 }
 
 .form {
-    margin-top: 1rem;
-    margin-left: 1rem;
-    margin-bottom: 1rem;
+    margin: 1rem;
+    margin-left: .25rem;
     padding-top: 1rem;
     padding-left: 1rem;
 }
@@ -201,6 +204,10 @@ footer {
 	display: block;
 }
 
+.form input[type="text"], .form input[type="email"], .form input[type="tel"], .form textarea {
+    width: 100%;
+}
+
 #join-button {
     border: none;
     background-color: #283618;
@@ -209,7 +216,7 @@ footer {
     font-size: large;
     border-radius: 10px;
     padding: .75rem;
-    width: 15rem;
+    width: 12.5rem;
     margin-left: .15rem;
 }
 
@@ -255,8 +262,9 @@ footer {
     color: #BC6C25;
 }
 
-.cards img {
+.logo {
     max-width: 150px;
+    height: auto;
 }
 
 .view-menu {
@@ -311,8 +319,8 @@ footer {
 /* -------- Dark Mode Switch -------- */
 .mode {
     position: absolute;
-	top: 2rem;
-	right: 1rem;
+	top: 0.5rem;
+	right: 0.5rem;
     width: 57px;
     height: 25px;
   }
@@ -323,44 +331,19 @@ footer {
     width: 0;
     height: 0;
   }
-  
-  /* The slider */
-  .slider {
+
+  .mode-toggle:before {
     position: absolute;
-    cursor: pointer;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-color: #ccc;
-    -webkit-transition: .4s;
-    transition: .4s;
+    right: 0.5rem;
+    content: "\0263D";
+    color:#BC6C25;
+    font-weight: bold;
+    font-size: 2em;
   }
   
-  .slider:before {
-    position: absolute;
-    content: "";
-    height: 18px;
-    width: 22px;
-    left: 4px;
-    bottom: 4px;
-    background-color: white;
-    -webkit-transition: .4s;
-    transition: .4s;
-  }
-  
-  input:checked + .slider {
-    background-color: #BC6C25;
-  }
-  
-  input:focus + .slider {
-    box-shadow: 0 0 1px #BC6C25;
-  }
-  
-  input:checked + .slider:before {
-    -webkit-transform: translateX(26px);
-    -ms-transform: translateX(26px);
-    transform: translateX(26px);
+  input:checked + .mode-toggle:before {
+    content: "\02600";
+    color:#FEFAE0;
   }
 
 @media screen and (min-width: 300px) {
@@ -368,17 +351,9 @@ footer {
     #menu {
         position: absolute;
         top: 0.5rem;
-        right: 1rem;
+        left: 0.5rem;
     }
 
-    #menu::before {
-        content: "☰";
-    }
-
-    #menu.open::before {
-        content: "X";
-    }
-    
     .navigation {
         display: none;
     }
