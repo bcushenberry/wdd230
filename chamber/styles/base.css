@@ -32,6 +32,10 @@ h1 {
     font-size: 18pt;
 }
 
+a:link {
+    color: #BC6C25;
+}
+
 nav {  
     margin-top: -1rem;
     justify-content: center;
@@ -50,7 +54,7 @@ nav a:hover {
     color: #FEFAE0;
 }
 
-a:link, a:visited {
+nav a:visited {
     color: #BC6C25;
 }
 
