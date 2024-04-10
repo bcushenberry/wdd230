@@ -1,0 +1,214 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat+Alternates');
+
+:root {
+    --font-family: "Montserrat Alternates", Helvetica, sans-serif;
+    --primary-color: #03045e;
+    --secondary-color: #0077b6;
+    --tertiary-color: #ff6d00;
+    --quaternary-color: white;
+    --box-shadow-color: rgba(0,0,0,.75);
+    /* ----- Table Values ----- */
+    --border: hsla(0,0%,15%,.8);
+    --shadow: hsl(0,0%,50%);
+}
+
+body {
+    font-family: var(--font-family);
+    margin: 0;
+    padding: 0;
+    max-width: 100%;
+    min-width: 400px;
+}
+
+.banner {
+    display: flex;
+    background-color: var(--tertiary-color);
+    padding: .25rem;
+
+}
+
+#banner-text {
+    flex-grow: 1;
+    margin-left: 0.5rem;
+}
+
+header, footer {
+    background-color: var(--primary-color);
+    color: var(--quaternary-color);
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    padding-left: 1rem;
+    width: 100%;
+}
+
+footer {
+    font-size: 14pt;
+    padding: 1rem;
+    font-weight: bold;
+}
+
+.hamburger {
+    display: none;
+    position: absolute;
+	top: 0.25rem;
+	right: 0.25rem;
+}
+
+.navigation ul {
+    display: flex;
+    list-style-type: none;
+    font-size: 1.5rem;
+    margin-top: 1rem;
+    margin-left: -2.5rem;
+    margin-bottom: -1rem;
+    font-weight: bold;
+}
+
+.navigation li {
+    margin-right: .5rem;
+    margin-left: .5rem;
+}
+
+.navigation a:link {
+    color: var(--quaternary-color);
+    text-decoration: none;
+}
+
+.navigation a:visited {
+    color: var(--tertiary-color);
+}
+
+.navigation a:hover {
+    background-color: var(--quaternary-color);
+    color: var(--secondary-color);
+    padding: .5rem;
+    padding-bottom: .25rem;
+}
+
+header hr {
+    margin-top: 1.25rem;
+    margin-left: -1rem;
+    width: 105%;
+    color: var(--quaternary-color);
+}
+
+header h1 {
+    font-size: 3rem;
+    margin-bottom: 1.75rem;
+    margin-top: .5rem;
+}
+
+.call-to-action {
+    margin-top: -1.5rem;
+    margin-bottom: 1.5rem;
+    color: var(--tertiary-color);
+    font-weight: bold;
+
+}
+
+.hero-img {
+    display: flex;
+    justify-content: center;
+    position: relative;
+}
+
+.hero-img img {
+    max-width: 100%;
+    height: auto;
+}
+
+section {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    color: var(--primary-color);
+	box-shadow: 0 0 3px rgba(0,0,0,.3);
+    margin: .25rem auto;
+    padding-bottom: 1rem;
+    width: 95%;
+    list-style-position: inside;
+}
+
+h2, h3, h4 {
+    margin-bottom: .5rem;
+    margin-top: .5rem;
+}
+
+.index-main h4, ul, li {
+    margin-bottom: .25rem;
+}
+
+.rental-overview hr {
+    width: 20rem;
+    margin-top: -.5rem;
+    margin-bottom: .25rem;
+}
+
+#weather-icon {
+    vertical-align: middle;
+    width: 20%;
+    height: auto;
+  }
+
+.no-flex-column {
+    flex-direction: none;
+}
+
+/* ---------- Rentals page ---------- */
+
+table {
+	margin: 10px;
+	border: thin solid var(--border);
+	box-shadow: 0 0 10px var(--shadow);
+	border-collapse: collapse;
+}
+
+caption {
+  padding: 10px;
+  caption-side: bottom;
+}
+
+tr:first-child th {
+	background-color: var(--primary-color);
+}
+
+th, td {
+	padding: 7px 15px;
+	border: 1px solid var(--shadow);
+}
+
+th {
+	background-color: var(--secondary-color);
+	font-size: larger;
+    color: var(--quaternary-color);
+}
+
+tbody tr:nth-child(even), #walkin {
+	background-color: hsl(0, 0%, 90%, 1);
+}
+
+.table-heading {
+    font-weight: bold;
+}
+
+.table, .navigation, header hr {
+    display: none;
+}
+
+@media screen and (min-width: 625px) {
+
+    .table, .navigation, header hr {
+        display: flex;
+    }
+
+    th:first-child {
+        background-color: var(--primary-color);
+    }
+
+    .m-table {
+        display: none;
+    }
+
+}

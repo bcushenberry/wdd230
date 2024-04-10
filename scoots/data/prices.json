@@ -1,0 +1,52 @@
+{
+    "prices": [
+        {
+            "type": "~Honda Metro Scooter",
+            "capacity": "1",
+            "rHalfday": "$20",
+            "rFullday": "$30",
+            "wHalfday": "$25",
+            "wFullday": "$35"
+        },
+        {
+            "type": "~Honda Dio Scooter",
+            "capacity": "2",
+            "rHalfday": "$30",
+            "rFullday": "$40",
+            "wHalfday": "$35",
+            "wFullday": "$45"
+        },
+        {
+            "type": "~Honda PCX150 Scooter",
+            "capacity": "2",
+            "rHalfday": "$40",
+            "rFullday": "$50",
+            "wHalfday": "$45",
+            "wFullday": "$55"
+        },
+        {
+            "type": "Honda Pioneer ATV",
+            "capacity": "4",
+            "rHalfday": "$50",
+            "rFullday": "$70",
+            "wHalfday": "$60",
+            "wFullday": "$80"
+        },
+        {
+            "type": "Jeep Wrangler - 4 door with a/c",
+            "capacity": "5",
+            "rHalfday": "$70",
+            "rFullday": "$100",
+            "wHalfday": "$85",
+            "wFullday": "$125"
+        },
+        {
+            "type": "Jeep Wrangler - 2 door",
+            "capacity": "4",
+            "rHalfday": "$60",
+            "rFullday": "$85",
+            "wHalfday": "$70",
+            "wFullday": "$90"
+        }
+    ]
+}

@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Welcome to ~Scoots~! Planning a trip to Cozumel? Make your vacation a special one by renting a scooter from ~Scoots~!">
+    <meta name="author" content="Brandon Cushenberry">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://bcushenberry.github.io/wdd230/scoots/">
+    <meta property="og:title" content="~Scoots~ Scooter Rentals: Home">
+    <meta property="og:image" content="FILL ME IN"> <!--Look here-->
+    <meta property="og:description" content="FILL ME IN"> <!--Look here-->
+    <link rel="icon" href="favicon.ico">
+<!--     <link rel="stylesheet" href="styles/normalize.css"> -->
+<!--     <link rel="stylesheet" href="styles/larger.css"> -->
+    <link rel="stylesheet" href="styles/base.css" crossorigin="anonymous">
+    <title>~Scoots~ Scooter Rentals: Home</title>
+</head>
+<body>
+    <div class="banner"><span id="banner-text"></span><button id="banner-close"></button></div>
+    <header>
+        <nav class="navigation">
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="rentals.html">Rentals</a></li>
+                <li><a href="reservations.html">Reservations</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+        <div><button class="hamburger">☰</button></div>
+        <hr>
+        <h1>~Scoots~</h1>
+        <span class="call-to-action">Rent a scooter today, and set out on the adventure of a lifetime!</span>
+    </header>
+    <main class="index-main">
+        <div class="hero-img">
+            <picture>
+                <source media="(max-width: 450px)" srcset="images/hero-img-small.webp">
+                <source media="(max-width: 750px)" srcset="images/hero-img-medium.webp">
+                <img id="hero-img" src="images/hero-img-large.webp" alt="a picture of Cozumel">
+            </picture>
+        </div>
+        <section class="contact-info">
+            <h3>Questions?</h3>
+        </section>
+        <section class="rental-overview">
+            <h2>Rentals Overview</h2>
+            <hr>
+            <div>
+                <h3>Scooters</h3>
+                <span class="rental-desc">For those looking to go adventuring alone or with a partner!<br>Scooters come in three speeds.</span>
+                <ul>
+                    <li>Honda Metropolitan (49cc) - 1 person</li>
+                    <li>Honda Dio (110cc) - 2 person</li>
+                    <li>Honda PCX150 (149cc) - 2 person</li>
+                </ul>
+            </div>
+            <div>
+                <h3>ATVs<br>(Side-by-Side)</h3>
+                <span class="rental-desc">For groups seeking adventures off the beaten path!</span>
+                <ul>
+                    <li>Honda Pioneer 1000 - 4 person</li>
+                </ul>
+            </div>
+            <div>
+                <h3>Jeeps</h3>
+                <span class="rental-desc">For groups who want both rugged capability and spacious comfort!</span>
+                <ul>
+                    <li>Jeep Wrangler - 4 door manuel with A/C - 5 person</li>
+                    <li>Jeep Wrangler - 2 door - open air - manuel - 4 person</li>
+                </ul>
+            </div>
+        </section>
+        <section class="weather">
+            <h3>Weather Information</h3>
+            <h4>Current Weather</h4>
+            <div class="no-flex-column">
+            <img id="weather-icon" src="" alt=""><span id="current-temp"></span> - <span id="weather-desc"></span>
+            <h4>Tomorrow (<span id="dayofweek1"></span>.)</h4>
+            <div class="forecast"><span id="dayofweek1"></span><span id="forecast1"></span></div>
+        </div>
+        </section>
+    </main>
+    <footer>
+        <div>&copy;<span id="currentYear"></span> ~Scoots~ Inc.</div>
+    </footer>
+    <script src="scripts/banner.js"></script>
+    <script src="scripts/expandmenu.js"></script>
+    <script src="scripts/weather.js"></script>
+    <script src="scripts/getdates.js"></script>
+</body>
+</html>
