@@ -7,14 +7,16 @@
     <meta name="author" content="Brandon Cushenberry">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://bcushenberry.github.io/wdd230/scoots/">
-    <meta property="og:title" content="~Scoots~ Scooter Rentals: Home">
+    <meta property="og:title" content="~Scoots~: Reservations">
     <meta property="og:image" content="FILL ME IN"> <!--Look here-->
     <meta property="og:description" content="FILL ME IN"> <!--Look here-->
     <link rel="icon" href="favicon.ico">
-<!--     <link rel="stylesheet" href="styles/normalize.css"> -->
-<!--     <link rel="stylesheet" href="styles/larger.css"> -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat+Alternates" rel="stylesheet" crossorigin="anonymous">
+    <link rel="stylesheet" href="styles/normalize.css">
     <link rel="stylesheet" href="styles/base.css" crossorigin="anonymous">
-    <title>~Scoots~ Scooter Rentals: Home</title>
+    <link rel="stylesheet" href="styles/medium.css">
+    <link rel="stylesheet" href="styles/large.css">
+    <title>~Scoots~: Reservations</title>
 </head>
 <body>
     <header>
@@ -22,15 +24,91 @@
             <ul>
             <li><a href="index.html">Home</a></li>
             <li><a href="rentals.html">Rentals</a></li>
-            <li><a href="#">Reservations</a></li>
+            <li class="currentpage"><a href="#">Reservations</a></li>
             <li><a href="contact.html">Contact</a></li>
         </ul>
     </nav>
+    <div><button class="hamburger">☰</button></div>
+    <hr>
+    <h1>~Scoots~</h1>
+    <p class="call-to-action">Set out on the adventure of a lifetime! <a href="rentals.html"><u>Rent a scooter today!</u></a></p>
+    </header>
     <main>
+        <section class="reservations-section">
+            <div class="rental-agreement">
+                <h2>Rental Services and Agreements</h2>
+                <ul>
+                    <li>A $50 security deposit is required to confirm reservations.</li>
+                    <li>A valid drivers license is required in hand at the time of rental.</li>
+                    <li>No one under the age of 12 years of age are allowed to ride on the scooters.</li>
+                    <li>Fuel charge is not included.</li>
+                    <li>Unlimited mileage.</li>
+                    <li>Liability insurance is included.</li>
+                    <li>Damage insurance is available for purchase.</li>
+                    <li>Free delivery to Cozumel hotels or Airbnbs for 2+ day rentals.</li>
+                    <li>Payment via Google Pay, Apple Pay, cash, credit card, debit card, or venmo.</li>
+                    <li>Rentals may be returned to either physical location.</li>
+                </ul>
+            </div>
+            <form class="form" action="thankyou.html" method="get">
 
+                <label for="res-date" class="input-element">Rental Date*<br>
+                    <input type="date" class="input-element" id="res-date" name="res-date" required>
+                </label><br>
+
+                <label for="res-period" class="input-element">Rental Period (days)*<br>
+                    <input type="text" class="input-element" id="res-period" name="res-period" placeholder="Ex. 0.5 for half day, 1 for one day" required>
+                </label><br>
+
+                <label for="res-type" class="input-element">Rental Type*<br>
+                    <select class="input-element" id="res-type" name="res-type" required>
+                        <option value="">Please Select a Vehicle</option>
+                        <option value="49cc">Honda Metropolitan (49cc) - 1 person</option>
+                        <option value="110cc">Honda Dio (110cc) - 2 person</option>
+                        <option value="149cc">Honda PCX150 (149cc) - 2 person</option>
+                        <option value="pioneer">Honda Pioneer 1000 - 4 person</option>
+                        <option value="wrangler2d">Jeep Wrangler - 2 door - open air - manual - 4 person</option>
+                        <option value="wrangler4d">Jeep Wrangler - 4 door manuel with A/C - 5 person</option>
+                    </select>
+                </label><br>
+
+                <label for="res-quantity" class="input-element">Number of Vehicles*<br>
+                    <input type="number" class="input-element" id="res-quantity" name="res-quantity" required>
+                </label><br>
+                
+                <label for="name" class="input-element">Name*<br>
+                    <input type="text" class="input-element" id="name" name="name" required>
+                </label><br>
+
+                <label for="email" class="input-element">Email*<br>
+                    <input type="email" class="input-element" id="email" name="email" placeholder="name@email.com" pattern="[a-zA-Z0-9_.\-]+@[a-zA-Z0-9_.\-]+\.[a-z]{2,4}$" required>
+                </label><br>
+
+                <label for="phone" class="input-element">Phone Number*<br>
+                    <input type="tel" class="input-element" id="phone" name="phone" required>
+                </label><br>
+
+                <label for="hometown" class="input-element">Home Country or State*<br>
+                    <input type="text" class="input-element" id="hometown" name="hometown" required>
+                </label><br>
+
+                <label for="cruiseline" class="input-element">Cruise Line (if applicable)<br>
+                    <input type="text" class="input-element" id="cruiseline" name="cruiseline">
+                </label><br>
+
+                <label for="res-request" class="input-element">Requests/Comments<br>
+                    <textarea  class="input-element" id="res-request" name="res-request" rows="8" cols="43" placeholder="Special needs, drop-off requests, etc."></textarea><br>
+                </label><br>
+
+                <input type="hidden" id="join-date" name="join-date">
+
+                <button type="submit" id="join-button" value="Join">Reserve My Vehicle!</button>
+            </form>
+        </section>
     </main>
     <footer>
-
+        <div>&copy;<span id="currentYear"></span> ~Scoots~ Inc.</div>
     </footer>
+    <script src="scripts/getdates.js"></script>
 </body>
 </html>

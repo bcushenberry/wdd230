@@ -15,9 +15,12 @@ async function getPriceData() {
 function populateTable(data) {
     const tableBody = document.querySelector('.rental-pricing');
     let output = "";
+    let imgNumber = 0;
     for (let entry of data.prices){
+        imgNumber++;        
         output +=`
             <tr>
+                <td><img class="flex-img" src="./images/vehicle-img${imgNumber}.webp" alt="Image of ${entry.type}"></td>
                 <td>${entry.type}</td>
                 <td>${entry.capacity}</td>
                 <td>${entry.rHalfday}</td>
@@ -33,10 +36,16 @@ function populateTable(data) {
 function populateMobileTable(data) {
     const mtableBody = document.querySelector('.m-rental-pricing');
     let output = "";
+    let imgNumber = 0;
     for (let entry of data.prices){
+        imgNumber++;        
         output +=`
             <tr>
             <td colspan="2"><strong>${entry.type}</strong></td>
+            </tr>
+
+            <tr>
+            <td colspan="2"><img class="flex-img" src="./images/vehicle-img${imgNumber}.webp" alt="Image of ${entry.type}"></td>
             </tr>
 
             <tr>
@@ -59,7 +68,6 @@ function populateMobileTable(data) {
             <tr>
             <td rowspan="1">Full day: ${entry.wFullday}</td>
             </tr>
-
         `;
     }
     mtableBody.innerHTML = output;

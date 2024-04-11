@@ -7,21 +7,23 @@
     <meta name="author" content="Brandon Cushenberry">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://bcushenberry.github.io/wdd230/scoots/">
-    <meta property="og:title" content="~Scoots~ Scooter Rentals: Home">
+    <meta property="og:title" content="~Scoots~: Home">
     <meta property="og:image" content="FILL ME IN"> <!--Look here-->
     <meta property="og:description" content="FILL ME IN"> <!--Look here-->
     <link rel="icon" href="favicon.ico">
-<!--     <link rel="stylesheet" href="styles/normalize.css"> -->
-<!--     <link rel="stylesheet" href="styles/larger.css"> -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat+Alternates" rel="stylesheet" crossorigin="anonymous">
+    <link rel="stylesheet" href="styles/normalize.css">
     <link rel="stylesheet" href="styles/base.css" crossorigin="anonymous">
-    <title>~Scoots~ Scooter Rentals: Home</title>
+    <link rel="stylesheet" href="styles/medium.css">
+    <link rel="stylesheet" href="styles/large.css">
+    <title>~Scoots~: Home</title>
 </head>
 <body>
     <div class="banner"><span id="banner-text"></span><button id="banner-close"></button></div>
     <header>
         <nav class="navigation">
             <ul>
-                <li><a href="#">Home</a></li>
+                <li class="currentpage"><a href="#">Home</a></li>
                 <li><a href="rentals.html">Rentals</a></li>
                 <li><a href="reservations.html">Reservations</a></li>
                 <li><a href="contact.html">Contact</a></li>
@@ -30,7 +32,7 @@
         <div><button class="hamburger">☰</button></div>
         <hr>
         <h1>~Scoots~</h1>
-        <span class="call-to-action">Rent a scooter today, and set out on the adventure of a lifetime!</span>
+        <p class="call-to-action">Set out on the adventure of a lifetime! <a href="rentals.html"><u>Rent a scooter today!</u></a></p>
     </header>
     <main class="index-main">
         <div class="hero-img">
@@ -40,46 +42,73 @@
                 <img id="hero-img" src="images/hero-img-large.webp" alt="a picture of Cozumel">
             </picture>
         </div>
-        <section class="contact-info">
-            <h3>Questions?</h3>
-        </section>
-        <section class="rental-overview">
-            <h2>Rentals Overview</h2>
-            <hr>
+        <div class="grid-container">
             <div>
+                <h2>Introduction</h2>
+                <p>Travel around Cozumel in style with ~Scoots~!<br>Experience the island's beauty with the best vehicles on the island!</p>
+                <h3>Get In Touch!</h3>
+                <p>Below you can find an overview of our rentals.<br>If you have any questions, <a href="contact.html"><u>contact us</u></a> or <a href="contact.html"><u>visit a store</u></a>!</p>
+                <p>You can also catch us on socia media at the following links:</p>
+                <div id="socialmedia-container">
+                    <a href="https://www.facebook.com">Facebook</a> || <a href="https://www.instagram.com">Instagram</a> || <a href="https://www.twitter.com">Twitter</a>
+                </div>
+            </div>
+            <picture id="intro-img">
+                <source media="(max-width: 300px)" srcset="images/weather-img-small.webp">
+                <source media="(max-width: 500px)" srcset="images/weather-img-medium.webp">
+                <img class="flex-img" src="images/intro-img-large.webp" alt="test" loading="lazy">
+            </picture>
+        </div>
+        <div class="grid-container">
+            <picture id="rental-img">
+                <source media="(max-width: 300px)" srcset="images/hero-img-small.webp">
+                <source media="(max-width: 450px)" srcset="images/hero-img-medium.webp">
+                <img class="flex-img" src="images/home-scooters-large.webp" alt="test" loading="lazy">
+            </picture>
+            <div id="rentals-overview">
+                <h2>Rentals Overview</h2>
                 <h3>Scooters</h3>
-                <span class="rental-desc">For those looking to go adventuring alone or with a partner!<br>Scooters come in three speeds.</span>
+                <p>For those looking to go adventuring alone or with a partner!<br>Scooters come in three speeds.</p>
                 <ul>
                     <li>Honda Metropolitan (49cc) - 1 person</li>
                     <li>Honda Dio (110cc) - 2 person</li>
                     <li>Honda PCX150 (149cc) - 2 person</li>
                 </ul>
-            </div>
-            <div>
                 <h3>ATVs<br>(Side-by-Side)</h3>
-                <span class="rental-desc">For groups seeking adventures off the beaten path!</span>
+                <p>For groups seeking adventures off the beaten path!</p>
                 <ul>
                     <li>Honda Pioneer 1000 - 4 person</li>
                 </ul>
-            </div>
-            <div>
                 <h3>Jeeps</h3>
-                <span class="rental-desc">For groups who want both rugged capability and spacious comfort!</span>
+                <p>For groups who want both rugged capability and spacious comfort!</p>
                 <ul>
-                    <li>Jeep Wrangler - 4 door manuel with A/C - 5 person</li>
+                    <li>Jeep Wrangler - 4 door manual with A/C - 5 person</li>
                     <li>Jeep Wrangler - 2 door - open air - manuel - 4 person</li>
                 </ul>
             </div>
-        </section>
-        <section class="weather">
-            <h3>Weather Information</h3>
-            <h4>Current Weather</h4>
-            <div class="no-flex-column">
-            <img id="weather-icon" src="" alt=""><span id="current-temp"></span> - <span id="weather-desc"></span>
-            <h4>Tomorrow (<span id="dayofweek1"></span>.)</h4>
-            <div class="forecast"><span id="dayofweek1"></span><span id="forecast1"></span></div>
         </div>
-        </section>
+        <div class="grid-container">
+            <div class="weather">
+                <h2>Weather Information</h2>
+                <h3>Today's Forecast</h3>
+                    <ul>
+                        <li><span id="weather-desc"></span><img id="weather-icon" src="" alt=""><br></li>
+                        <li>High: <span id="high-temp"></span></li>
+                        <li>Low: <span id="low-temp"></span></li>
+                        <li>Current: <span id="current-temp"></span><br></li>
+                        <li>Feels like: <span id="feels-like"></span></li>
+                        <li>Humidity: <span id="humidity"></span></li>
+                        <li>Air Pressure: <span id="pressure"></span></li>
+                    </ul>
+                <h3>Tomorrow's Forecast</h3>
+                    <div class="forecast"><span id="tomorrow"></span><span id="tomorrow-forecast"></span> @ 3:00pm</div>
+            </div>
+            <picture>
+                <source media="(max-width: 300px)" srcset="images/weather-img-small.webp">
+                <source media="(max-width: 500px)" srcset="images/weather-img-medium.webp">
+                <img class="flex-img" src="images/weather-img-large.webp" alt="test" loading="lazy">
+            </picture>
+        </div>
     </main>
     <footer>
         <div>&copy;<span id="currentYear"></span> ~Scoots~ Inc.</div>

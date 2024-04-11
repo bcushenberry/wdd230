@@ -7,14 +7,16 @@
     <meta name="author" content="Brandon Cushenberry">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://bcushenberry.github.io/wdd230/scoots/">
-    <meta property="og:title" content="~Scoots~ Scooter Rentals: Home">
+    <meta property="og:title" content="~Scoots~: Contact">
     <meta property="og:image" content="FILL ME IN"> <!--Look here-->
     <meta property="og:description" content="FILL ME IN"> <!--Look here-->
     <link rel="icon" href="favicon.ico">
-<!--     <link rel="stylesheet" href="styles/normalize.css"> -->
-<!--     <link rel="stylesheet" href="styles/larger.css"> -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat+Alternates" rel="stylesheet" crossorigin="anonymous">
+    <link rel="stylesheet" href="styles/normalize.css">
     <link rel="stylesheet" href="styles/base.css" crossorigin="anonymous">
-    <title>~Scoots~ Scooter Rentals: Home</title>
+    <link rel="stylesheet" href="styles/medium.css">
+    <link rel="stylesheet" href="styles/large.css">
+    <title>~Scoots~: Contact</title>
 </head>
 <body>
     <header>
@@ -23,22 +25,53 @@
             <li><a href="index.html">Home</a></li>
             <li><a href="rentals.html">Rentals</a></li>
             <li><a href="reservations.html">Reservations</a></li>
-            <li><a href="#">Contact</a></li>
+            <li class="currentpage"><a href="#">Contact</a></li>
         </ul>
     </nav>
-    <main>
+    <div><button class="hamburger">☰</button></div>
+    <hr>
+    <h1>~Scoots~</h1>
+    <p class="call-to-action">Set out on the adventure of a lifetime! <a href="rentals.html"><u>Rent a scooter today!</u></a></p>
+    </header>
+    <main class="contact-main">
         <section>
-            <h2>Contact Information</h2>
-            <p>.</p>
+            <h2>Get In Touch!</h2>
+            <p>We love to hear from both future <br>and previous customers! You can <br>get ahold of us via phone, email, or <br>using the inquiry form below.</p>
+            <div><strong>Phone: (555) 555-1234</strong></div>
+            <div><strong>Email: contact@scootsrentals.com</strong></div>
         </section>
+        <div class="contact-grid">
+            <div class="contact-container" id="contact-inquiries">
+                <h2>Inquiries</h2>
+                <p>Got questions? We have answers! <br>Fill out the form below and we'll <br>get back to you within 24 hours. <br>(All fields required)</p>
+                <form class="form" action="thanks-inquiry.html" method="get">
+                <label for="name"><strong>Name</strong><br>
+                    <input type="text" class="input-element" id="name" name="name" required>
+                </label><br>
+                
+                <label for="email"><strong>Email</strong><br>
+                    <input type="email" class="input-element" id="email" name="email" placeholder="name@email.com" pattern="[a-zA-Z0-9_.\-]+@[a-zA-Z0-9_.\-]+\.[a-z]{2,4}$" required>
+                </label><br>
 
-        <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d934.2176956092571!2d-86.93080481060416!3d20.511522716557188!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sus!4v1712614089021!5m2!1sen!2sus" width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                <label for="comment"><strong>Inquiry</strong><br>
+                    <textarea class="input-element" id="form-inquiry" name="inquiry" rows="8" cols="30" required></textarea> <br>
+                </label><br>
 
-
-        <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d1871.0892059253842!2d-86.9582777067492!3d20.29288104682459!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sus!4v1712614243357!5m2!1sen!2sus" width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                <button type="submit" id="join-button" value="Join">Send Inquiry</button>
+                </form>
+            </div>
+        <div class="contact-container" id="contact-map">
+                <h2>Locations</h2>
+                <p>Alternatively, you can visit <br>us in person! <br>We have two convenient locations <br>near the Playa del Carmen- <br>Cozumel Ferry dock in el Centro de <br>Cozumel and near the Terminal <br>Puerta Maya.</p>
+                <div id="gmap-container">
+                    <iframe src="https://www.google.com/maps/d/embed?mid=1cYQ1lO6n3aDLRuoVWC6iYc2EpbvoNLI&ehbc=2E312F&noprof=1" id="gmap" width="370" height="600" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+            </div>
+        </div>
     </main>
     <footer>
-
+        <div>&copy;<span id="currentYear"></span> ~Scoots~ Inc.</div>
     </footer>
+    <script src="scripts/getdates.js"></script>
 </body>
 </html>

@@ -1,7 +1,5 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat+Alternates');
-
 :root {
-    --font-family: "Montserrat Alternates", Helvetica, sans-serif;
+
     --primary-color: #03045e;
     --secondary-color: #0077b6;
     --tertiary-color: #ff6d00;
@@ -13,7 +11,10 @@
 }
 
 body {
-    font-family: var(--font-family);
+    font-family: "Montserrat Alternates", Helvetica, sans-serif;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
     margin: 0;
     padding: 0;
     max-width: 100%;
@@ -38,21 +39,19 @@ header, footer {
     display: flex;
     flex-direction: column;
     position: relative;
-    padding-left: 1rem;
-    width: 100%;
 }
 
 footer {
     font-size: 14pt;
     padding: 1rem;
     font-weight: bold;
+    margin-top: 1rem;
 }
 
 .hamburger {
-    display: none;
     position: absolute;
-	top: 0.25rem;
-	right: 0.25rem;
+	top: 0.5rem;
+	right: 0.5rem;
 }
 
 .navigation ul {
@@ -60,8 +59,8 @@ footer {
     list-style-type: none;
     font-size: 1.5rem;
     margin-top: 1rem;
-    margin-left: -2.5rem;
     margin-bottom: -1rem;
+    margin-left: -1.75rem;
     font-weight: bold;
 }
 
@@ -70,13 +69,20 @@ footer {
     margin-left: .5rem;
 }
 
-.navigation a:link {
+.navigation a:link, header a:link {
     color: var(--quaternary-color);
     text-decoration: none;
 }
+section a:link {
+    color: var(--primary-color);
+}
 
-.navigation a:visited {
+.navigation a:visited, section a:visited {
     color: var(--tertiary-color);
+}
+
+header a:visited {
+    color: var(--quaternary-color);
 }
 
 .navigation a:hover {
@@ -86,25 +92,35 @@ footer {
     padding-bottom: .25rem;
 }
 
+header a:hover {
+    background-color: var(--quaternary-color);
+    color: var(--secondary-color);
+    padding: .15rem;   
+}
+
+section a:hover {
+    background-color: var(--secondary-color);
+    color: var(--quaternary-color);
+}
+
 header hr {
     margin-top: 1.25rem;
-    margin-left: -1rem;
-    width: 105%;
+    width: 100%;
     color: var(--quaternary-color);
 }
 
 header h1 {
     font-size: 3rem;
-    margin-bottom: 1.75rem;
     margin-top: .5rem;
+    margin-left: 1rem;
 }
 
 .call-to-action {
     margin-top: -1.5rem;
+    margin-left: 1rem;
     margin-bottom: 1.5rem;
     color: var(--tertiary-color);
     font-weight: bold;
-
 }
 
 .hero-img {
@@ -118,7 +134,7 @@ header h1 {
     height: auto;
 }
 
-section {
+section, .grid-container, .contact-container {
     display: flex;
     flex-direction: column;
     text-align: center;
@@ -131,30 +147,82 @@ section {
     list-style-position: inside;
 }
 
+.grid-container {
+    padding-top: 1rem;
+}
+
+picture {
+    grid-column: 2 / 4;
+}
+
+#rental-img {
+    grid-column: 1 / 3;
+}
+
+.flex-img {
+    display: flex;
+    text-align: center;
+    margin: .25rem auto;
+    min-width: 60px;
+    max-width: 95%;
+    height: auto;
+}
+
 h2, h3, h4 {
     margin-bottom: .5rem;
     margin-top: .5rem;
 }
 
-.index-main h4, ul, li {
-    margin-bottom: .25rem;
+.currentpage {
+    border-bottom: 3px solid var(--tertiary-color);
 }
 
-.rental-overview hr {
-    width: 20rem;
-    margin-top: -.5rem;
+.currentpage a:hover {
+    background-color: var(--quaternary-color);
+    color: var(--secondary-color);
+}
+
+/* ---------- Home page ---------- */
+.index-main h4, ul, li {
     margin-bottom: .25rem;
 }
 
 #weather-icon {
     vertical-align: middle;
-    width: 20%;
+    width: 15%;
     height: auto;
   }
 
 .no-flex-column {
     flex-direction: none;
 }
+
+.weather li {
+    list-style: none;
+    margin-bottom: .75rem;
+    margin-left: -1rem;
+}
+
+.forecast {
+    margin-top: .5rem;
+    margin-left: 1rem;
+}
+
+#intro-img {
+    max-width: 100%;
+    height: auto;
+}
+
+#rental-img {
+    max-width: 450px;
+    height: auto;
+}
+
+#weather-img {
+    max-width: 400px;
+    height: auto;
+}
+
 
 /* ---------- Rentals page ---------- */
 
@@ -163,6 +231,7 @@ table {
 	border: thin solid var(--border);
 	box-shadow: 0 0 10px var(--shadow);
 	border-collapse: collapse;
+    overflow-y: auto;
 }
 
 caption {
@@ -189,26 +258,56 @@ tbody tr:nth-child(even), #walkin {
 	background-color: hsl(0, 0%, 90%, 1);
 }
 
-.table-heading {
-    font-weight: bold;
-}
-
-.table, .navigation, header hr {
+.table-large, .navigation, header hr {
     display: none;
 }
 
-@media screen and (min-width: 625px) {
+/* ---------- Contact page ---------- */
 
-    .table, .navigation, header hr {
-        display: flex;
-    }
+#gmap-container {
+    width: 100%;
+    overflow: hidden;
+    height: 300px;
+}
 
-    th:first-child {
-        background-color: var(--primary-color);
-    }
+#gmap {
+    border:0;
+    margin-top: -150px;
+}
 
-    .m-table {
-        display: none;
-    }
+.input-element {
+    width: 100%;
+    margin-bottom: .75rem;
+}
 
+#email:not(:placeholder-shown) {
+    background-color: lightgray;
+}
+
+#email:valid {
+    background-color: white;
+}
+
+/* ---------- Reservations page ---------- */
+.reservations-section {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    min-width: auto;
+    padding-top: 1rem;
+}
+
+.reservations-section form {
+    padding-right: 3.5rem;
+    padding-left: 3rem;
+}
+
+.rental-agreement {
+    padding-left: 1rem;
+    max-width: 100%;
+    margin-bottom: 1rem;
+}
+
+#res-type {
+    width: 101.5%;
 }

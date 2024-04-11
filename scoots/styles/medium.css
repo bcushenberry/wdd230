@@ -1,0 +1,34 @@
+@media screen and (max-width: 500px) {
+    section p br {
+        display: none;
+    }
+
+}
+
+@media screen and (min-width: 650px) {
+
+    .hamburger {
+        display: none;
+    }
+}
+
+@media screen and (min-width: 750px) {
+    
+    .table-large, .navigation, header hr {
+        display: flex;
+    }
+
+    .table-heading {
+        font-weight: bold;
+    }
+
+    th:first-child {
+        background-color: var(--primary-color);
+    }
+
+    .table-small {
+        display: none;
+    }
+
+
+}
