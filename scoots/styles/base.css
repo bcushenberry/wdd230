@@ -240,6 +240,7 @@ table {
 	box-shadow: 0 0 10px var(--shadow);
 	border-collapse: collapse;
     overflow-y: auto;
+    border-collapse: collapse;
 }
 
 caption {
@@ -247,8 +248,17 @@ caption {
   caption-side: bottom;
 }
 
-tr:first-child th {
+tr:first-child th, .filler {
 	background-color: var(--primary-color);
+    border: none;
+}
+
+tr > th {
+    border: none;
+}
+
+.filler {
+    height: 1px;
 }
 
 th, td {
@@ -262,7 +272,7 @@ th {
     color: var(--quaternary-color);
 }
 
-tbody tr:nth-child(even), #walkin {
+tbody tr:nth-child(odd) {
 	background-color: hsl(0, 0%, 90%, 1);
 }
 
