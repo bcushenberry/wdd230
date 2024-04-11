@@ -6,6 +6,9 @@
 }
 
 @media screen and (min-width: 650px) {
+    .navigation, .navigation ul, header hr {
+        display: flex;
+    }
 
     .hamburger {
         display: none;
@@ -14,7 +17,7 @@
 
 @media screen and (min-width: 750px) {
     
-    .table-large, .navigation, header hr {
+    .table-large {
         display: flex;
     }
 

@@ -27,7 +27,6 @@ async function apiFetch() {
     const response = await fetch(url);
     if (response.ok) {
       const data = await response.json();
-      console.log(data)
       displayCurrentWeather(data);
     } else {
         throw Error(await response.text());
@@ -41,7 +40,7 @@ function displayCurrentWeather(data) {
   currentTemp.innerHTML = `${data.main.temp.toFixed(0)}&deg;F`;
   humidity.innerHTML = `${data.main.humidity}%`;
   highTemp.innerHTML = `${data.main.temp_max}&deg;F`;
-  bannertext.innerHTML =`<strong>Today's high temperature in Cozumel: ${data.main.temp_max}&deg;F. Plan accordingly!</strong>`;
+  bannertext.innerHTML =`<strong>Today's high temperature in Cozumel: ${data.main.temp_max}&deg;F</strong>`;
   lowTemp.innerHTML = `${data.main.temp_min}&deg;F`;
   feelsLike.innerHTML = `${data.main.feels_like}&deg;F`;
   pressure.innerHTML = `${data.main.pressure} hPa`;
@@ -62,7 +61,6 @@ async function forecastFetch() {
     const forecastresponse = await fetch(forecasturl);
     if (forecastresponse.ok) {
       const forecastdata = await forecastresponse.json();
-      console.log(forecastdata)
       displayForecast(forecastdata);
     } else {
         throw Error(await forecastresponse.text());

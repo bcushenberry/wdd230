@@ -55,7 +55,6 @@ footer {
 }
 
 .navigation ul {
-    display: flex;
     list-style-type: none;
     font-size: 1.5rem;
     margin-top: 1rem;
@@ -101,6 +100,19 @@ header a:hover {
 section a:hover {
     background-color: var(--secondary-color);
     color: var(--quaternary-color);
+}
+
+.navigation, header hr {
+    display: none;
+}
+
+.navigation.open {
+    display: block;
+    padding-bottom: 1rem;
+}
+
+.navigation.close {
+    display: none;
 }
 
 header hr {
@@ -258,7 +270,7 @@ tbody tr:nth-child(even), #walkin {
 	background-color: hsl(0, 0%, 90%, 1);
 }
 
-.table-large, .navigation, header hr {
+.table-large {
     display: none;
 }
 
